@@ -1,16 +1,14 @@
 import { DOMElement, useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiListSettingsFill } from "react-icons/ri";
+import { Game } from "../App";
 
-export type Game = {
-  id: number;
-  name: string;
-  logo: string;
-  favorite: boolean;
-};
+type Props = {
+    games: Game[];
+    setGames: (games: Game[]) => void
+}
 
-export function LeftSection() {
-  const [games, setGames] = useState<Game[]>([]);
+export function LeftSection({games, setGames}: Props) {
   const [toggle, setToggle] = useState(false);
   const [toggleFavorite, setToggleFavorite] = useState(false);
 
@@ -117,6 +115,9 @@ export function LeftSection() {
               return (
                 <li
                   key={game.id}
+                  onClick={() => {
+
+                  }}
                   onDoubleClick={() => {
                     fetch(`http://localhost:4000/games/${game.id}`, {
                       method: "PATCH",

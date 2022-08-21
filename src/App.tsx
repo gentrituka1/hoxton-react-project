@@ -8,15 +8,27 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { RiListSettingsFill } from "react-icons/ri";
 import { Header } from "./components/Header";
 import { LeftSection } from "./components/LeftSection";
-import { Main } from "./components/Main";
+import { Main } from "./pages/Main";
 import { Footer } from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+
+export type Game = {
+  id: number;
+  name: string;
+  logo: string;
+  favorite: boolean;
+  description: string;
+};
+
 
 function App() {
+  const [games, setGames] = useState<Game[]>([]);
+
   return (
     <div className="App">
       <Header />
-      <LeftSection />
-      <Main />
+      <LeftSection games={games} setGames={setGames} />
+      <Main games={games} setGames={setGames}/>
       <Footer />
     </div>
   );

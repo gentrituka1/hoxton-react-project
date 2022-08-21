@@ -3,43 +3,50 @@
     {
       "id": 1,
       "name": "Counter Strike",
+      "description": "Bug fixes and improvements to the game",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/10/capsule_sm_120.jpg",
       "favorite": false
     },
     {
       "id": 2,
       "name": "Counter Strike: Global Offensive",
+      "description": "Happy Birthday CS:GO",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/730/capsule_184x69.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 3,
       "name": "Dota 2",
+      "description": "Dev Update: Dota 2 Upcoming Changes",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/570/capsule_184x69.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 4,
       "name": "Apex Legends",
+      "description": "Meet Vantage | Apex Legends Character Trailer",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1172470/capsule_184x69.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 5,
       "name": "PUBG: BattleGrounds",
+      "description": "New in PUBG: BattleGrounds",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/578080/capsule_184x69.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 6,
       "name": "Grand Theft Auto V",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/271590/capsule_184x69.jpg",
+      "description": "Grand Theft Auto V: New Update Release Notes",
       "favorite": false
     },
     {
       "id": 7,
       "name": "FIFA 22",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1506830/capsule_184x69.jpg",
+      "description": "FIFA 23: Pre-Order Now",
       "favorite": false
     }
   ]
