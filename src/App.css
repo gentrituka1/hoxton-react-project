@@ -5,7 +5,7 @@
     "header         header" 70px
     "left-section   main-section" 1fr
     "footer         footer" 50px /
-    300px           1fr;
+    300px           auto;
 }
 
 /* header section */
@@ -68,6 +68,7 @@ header {
 .left-section-top input{
   all: unset;
   padding-left: 5px;
+  color: white;
 }
 .left-section-top input::placeholder{
   font-size: 1.2rem;
@@ -106,6 +107,35 @@ header {
 
 .main-section {
   grid-area: main-section;
+  background-color: #1f2b37;
+}
+.whats-new{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+}
+.whats-new-arrows{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  color: #7e7f81
+}
+.whats-new-arrows h1:hover{
+  color: white;
+  cursor: pointer;
+}
+.main-section-top{
+    padding: 10px;
+    border-bottom: black 1px solid;
+}
+.main-section-top-news-list{
+  list-style: none;
+}
+.main-section-top-news-div img{
+  width: 250px;
+  height: 179px;
 }
 
 /* footer section */

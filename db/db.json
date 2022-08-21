@@ -5,14 +5,14 @@
       "name": "Counter Strike",
       "description": "Bug fixes and improvements to the game",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/10/capsule_sm_120.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 2,
       "name": "Counter Strike: Global Offensive",
       "description": "Happy Birthday CS:GO",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/730/capsule_184x69.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 3,

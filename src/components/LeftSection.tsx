@@ -9,6 +9,7 @@ type Props = {
 }
 
 export function LeftSection({games, setGames}: Props) {
+  const [filteredGames, setFilteredGames] = useState<Game[]>([]);
   const [toggle, setToggle] = useState(false);
   const [toggleFavorite, setToggleFavorite] = useState(false);
 
@@ -34,6 +35,16 @@ export function LeftSection({games, setGames}: Props) {
             onMouseLeave={(event) => {
               event.target.placeholder = "";
             }}
+            onChange={(event) => {
+              const gamesCopy = structuredClone(games);
+              const filteredGames = gamesCopy.filter((game) => {
+                return game.name.toLowerCase().includes(event.target.value.toLowerCase());
+              })
+              if(event.target.value === "") 
+              setFilteredGames(gamesCopy);
+              else setFilteredGames(filteredGames);
+            console.log(event.target.value);
+          }} 
           />
         </div>
         <RiListSettingsFill className="left-section-font" />
@@ -57,7 +68,7 @@ export function LeftSection({games, setGames}: Props) {
           </h2>
           <div className="left-section-bottom-favorite-list">
             <div id="list1">
-              {games.map((game) => {
+              {filteredGames.map((game) => {
                 if (game.favorite === true) {
                   return (
                     <li
@@ -111,7 +122,7 @@ export function LeftSection({games, setGames}: Props) {
             - Uncategorized
           </h2>
           <div className="left-section-bottom-uncategorized-list" id="list2">
-            {games.map((game) => {
+            {filteredGames.map((game) => {
               return (
                 <li
                   key={game.id}
