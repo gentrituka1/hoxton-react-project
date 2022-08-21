@@ -4,31 +4,31 @@
       "id": 1,
       "name": "Counter Strike",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/10/capsule_sm_120.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 2,
       "name": "Counter Strike: Global Offensive",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/730/capsule_184x69.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 3,
       "name": "Dota 2",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/570/capsule_184x69.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 4,
       "name": "Apex Legends",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1172470/capsule_184x69.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 5,
       "name": "PUBG: BattleGrounds",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/578080/capsule_184x69.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 6,

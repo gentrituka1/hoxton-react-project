@@ -76,8 +76,15 @@ header {
   color: #7e7f81;
   font-size: 2rem;
 }
-
-
+.left-section-bottom-menu h2{
+  color: white;
+  padding: 5px;
+  transform: translateY(-5px);
+}
+.left-section-bottom-menu h2:hover{
+  background-color: #3f4c6a;
+  cursor: pointer;
+}
 .left-section-bottom-menu li{
   display: grid;
   grid-template-columns: auto 1fr;
@@ -90,7 +97,7 @@ header {
 }
 
 .left-section-bottom-menu li:hover{
-  background-color: #3f4c6a;
+  background-color: #3f4c6a7e;
   cursor: pointer;
 }
 
