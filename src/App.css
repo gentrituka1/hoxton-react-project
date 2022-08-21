@@ -5,7 +5,7 @@
     "header         header" 70px
     "left-section   main-section" 1fr
     "footer         footer" 50px /
-    auto            1fr;
+    300px           1fr;
 }
 
 /* header section */
@@ -50,13 +50,14 @@ header {
 .left-section {
   grid-area: left-section;
   background-color: #24292f;
-  padding: 5px;
+  padding: 10px;
 }
 .left-section-top{
   display: grid;
   grid-auto-flow: column;
   place-items: center;
   background-color: #1f2022;
+  border-radius: 5px;
 }
 .left-section-top-top{
   display: grid;
@@ -71,12 +72,28 @@ header {
 .left-section-top input::placeholder{
   font-size: 1.2rem;
 }
-
-
 .left-section-font{
   color: #7e7f81;
   font-size: 2rem;
 }
+
+
+.left-section-bottom-menu li{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  padding-left: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.left-section-bottom-menu li:hover{
+  background-color: #3f4c6a;
+  cursor: pointer;
+}
+
 
 /* main section */
 
