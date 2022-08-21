@@ -1,0 +1,125 @@
+.App {
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "header         header" 70px
+    "left-section   main-section" 1fr
+    "footer         footer" 50px /
+    auto            1fr;
+}
+
+/* header section */
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-auto-flow: column;
+  background: -webkit-linear-gradient(top, #1b2d45, #1e242b);
+  align-content: center;
+}
+.header-left {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  padding-left: 10px;
+  gap: 30px;
+  color: #c9cbd3;
+}
+.header-left h1{
+  font-size: 1.8rem;
+}
+.header-font {
+  font-size: 1.5rem;
+}
+.header-font:hover,
+.header-left h1:hover {
+  color: white;
+  cursor: pointer;
+  text-shadow: #c9cbd3 0px 0px 15px;
+}
+.user {
+  display: grid;
+  justify-content: end;
+  color: white;
+  padding-right: 10px;
+}
+
+/* left section */
+
+.left-section {
+  grid-area: left-section;
+  background-color: #24292f;
+  padding: 5px;
+}
+.left-section-top{
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  background-color: #1f2022;
+}
+.left-section-top-top{
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  padding: 5px;
+}
+.left-section-top input{
+  all: unset;
+  padding-left: 5px;
+}
+.left-section-top input::placeholder{
+  font-size: 1.2rem;
+}
+
+
+.left-section-font{
+  color: #7e7f81;
+  font-size: 2rem;
+}
+
+/* main section */
+
+.main-section {
+  grid-area: main-section;
+}
+
+/* footer section */
+
+footer {
+  padding: 20px;
+  grid-area: footer;
+  background-color: #292c31;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  color: #c5c8d1;
+}
+.font {
+  font-size: 1.5rem;
+  display: grid;
+  align-content: center;
+}
+.footer-left {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-items: center;
+  gap: 10px;
+}
+.footer-left:hover,
+.footer-mid p:hover,
+.footer-right:hover {
+  color: white;
+  cursor: pointer;
+}
+.footer-right {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-items: center;
+  gap: 10px;
+}
+.footer-right-friends {
+  display: grid;
+}
