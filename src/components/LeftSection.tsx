@@ -47,7 +47,23 @@ export function LeftSection() {
             {games.map((game) => {
               if (game.favorite === true) {
                 return (
-                  <li key={game.id}>
+                  <li key={game.id} 
+                  onDoubleClick={() => {
+                    fetch(`http://localhost:4000/games/${game.id}`, {
+                        method: "PATCH",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            favorite: !game.favorite
+                        })
+                    })
+                    .then(res => res.json())
+                    .then(game => {
+                        setGames(games.map(g => g.id === game.id ? game : g))
+                    })
+                }}
+                  >
                     <img src={game.logo} alt={game.name} width={40} height={40}/>
                     <p>{game.name}</p>
                   </li>

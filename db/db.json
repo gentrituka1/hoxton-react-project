@@ -10,19 +10,19 @@
       "id": 2,
       "name": "Counter Strike: Global Offensive",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/730/capsule_184x69.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 3,
       "name": "Dota 2",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/570/capsule_184x69.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 4,
       "name": "Apex Legends",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1172470/capsule_184x69.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 5,
