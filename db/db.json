@@ -14,7 +14,7 @@
       "name": "Counter Strike: Global Offensive",
       "description": "Happy Birthday CS:GO",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/730/capsule_184x69.jpg",
-      "favorite": false,
+      "favorite": true,
       "installed": false,
       "time": "1 hour ago"
     },
@@ -23,7 +23,7 @@
       "name": "Dota 2",
       "description": "Dev Update: Dota 2 Upcoming Changes",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/570/capsule_184x69.jpg",
-      "favorite": true,
+      "favorite": false,
       "installed": false,
       "time": "1 hour ago"
     },
@@ -32,7 +32,7 @@
       "name": "Apex Legends",
       "description": "Meet Vantage | Apex Legends Character Trailer",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1172470/capsule_184x69.jpg",
-      "favorite": false,
+      "favorite": true,
       "installed": false,
       "time": "3 hours ago"
     },
@@ -59,7 +59,7 @@
       "name": "FIFA 22",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1506830/capsule_184x69.jpg",
       "description": "FIFA 23: Pre-Order Now",
-      "favorite": true,
+      "favorite": false,
       "installed": false,
       "time": "10 hours ago"
     },
@@ -77,7 +77,7 @@
       "name": "Sea of Thieves",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1172620/capsule_184x69.jpg",
       "description": "\"A Hunter's Cry\" is Sea of Tieves Sixth Adventure Live Now",
-      "favorite": false,
+      "favorite": true,
       "installed": false,
       "time": "This Week"
     },

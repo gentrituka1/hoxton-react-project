@@ -74,7 +74,18 @@ export function Main({ games }: Props) {
           ))}
         </div>
       </div>
-      <div className="main-section-bottom"></div>
+      <div className="main-section-bottom">
+        <div className="main-section-bottom-recent-games">
+          <h2>ALL GAMES({games.length})</h2>
+            <div className="main-section-bottom-all-games-list">
+              {games.map((game) => 
+                <div className="main-section-bottom-all-games-item">
+                    <img src={game.logo} width={300}/>
+                </div>
+              )}
+            </div>
+          </div>
+      </div>
     </main>
   );
 }
