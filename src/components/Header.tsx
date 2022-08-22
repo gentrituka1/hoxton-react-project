@@ -7,8 +7,8 @@ export function Header() {
       <div className="header-left">
         <IoMdArrowRoundBack className="header-font" />
         <IoMdArrowRoundForward className="header-font" />
-        <h1>Store</h1>
-        <Link className="links" to={"/library"}><h1>Library</h1></Link>
+        <Link className="links" to="/store"><h1>Store</h1></Link>
+        <Link className="links" to="/library"><h1>Library</h1></Link>
         <h1>Community</h1>
       </div>
       <div className="user">

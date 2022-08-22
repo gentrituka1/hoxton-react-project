@@ -5,6 +5,7 @@ import { LeftSection } from "./components/LeftSection";
 import { Library } from "./pages/Library";
 import { Footer } from "./components/Footer";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { Store } from "./pages/Store";
 
 export type Game = {
   id: number;
@@ -14,6 +15,7 @@ export type Game = {
   description: string;
   installed: boolean;
   time: string;
+  price: number | string;
 };
 
 
@@ -38,6 +40,7 @@ function App() {
       <Routes>
         <Route index element={<Navigate to="/library"/>} />
         <Route path="/library" element={<Library games={games} setGames={setGames}/>} />
+        <Route path="/store" element={<Store games={games} setGames={setGames}/>}/>
       </Routes>
     </div>
   );
