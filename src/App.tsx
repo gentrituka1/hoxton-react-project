@@ -1,16 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { IoMdArrowRoundBack } from "react-icons/io";
-import { IoMdArrowRoundForward } from "react-icons/io";
-import { RiAddBoxLine } from "react-icons/ri";
-import { BiMessageRoundedAdd } from "react-icons/bi";
-import { AiOutlineSearch } from "react-icons/ai";
-import { RiListSettingsFill } from "react-icons/ri";
 import { Header } from "./components/Header";
 import { LeftSection } from "./components/LeftSection";
-import { Main } from "./pages/Main";
+import { Library } from "./pages/Library";
 import { Footer } from "./components/Footer";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 export type Game = {
   id: number;
@@ -39,9 +33,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <LeftSection games={games} setGames={setGames} />
-      <Main games={games}/>
-      <Footer />
+      
+      <Footer/>
+      <Routes>
+        <Route index element={<Navigate to="/library"/>} />
+        <Route path="/library" element={<Library games={games} setGames={setGames}/>} />
+      </Routes>
     </div>
   );
 }

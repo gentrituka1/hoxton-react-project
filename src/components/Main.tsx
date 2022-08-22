@@ -1,37 +1,36 @@
-import { useEffect, useState } from "react";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
+import { useState, useEffect } from "react";
 import { Game } from "../App";
 
 type Props = {
-  games: Game[];
-};
+    games: Game[];
+  };
 
-export function Main({ games }: Props) {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+export function Main ({ games }: Props) {
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
 
-  useEffect(() => {
-    if(games.length === 0) return
-    const game = games[selectedIndex];
-    const gameEl = document.querySelector(`#game-${game.id}`);
-    if (gameEl) {
-      gameEl.scrollIntoView({ inline: "center" });
+    useEffect(() => {
+      if(games.length === 0) return
+      const game = games[selectedIndex];
+      const gameEl = document.querySelector(`#game-${game.id}`);
+      if (gameEl) {
+        gameEl.scrollIntoView({ inline: "center" });
+      }
+    }, [games, selectedIndex]);
+  
+    function previous() {
+      let newIndex = selectedIndex === 0 ? games.length - 1 : selectedIndex - 1;
+      setSelectedIndex(newIndex);
     }
-  }, [games, selectedIndex]);
+  
+    function next() {
+      let newIndex = selectedIndex === games.length - 1 ? 0 : selectedIndex + 1;
+      setSelectedIndex(newIndex);
+    }
 
-  function previous() {
-    let newIndex = selectedIndex === 0 ? games.length - 1 : selectedIndex - 1;
-    setSelectedIndex(newIndex);
-  }
 
-  function next() {
-    let newIndex = selectedIndex === games.length - 1 ? 0 : selectedIndex + 1;
-    setSelectedIndex(newIndex);
-  }
-
-  return (
-    <main className="main-section">
+    return (
+        <main className="main-section">
       <div className="main-section-top">
         <div className="whats-new">
           <h2>WHAT'S NEW</h2>
@@ -87,5 +86,5 @@ export function Main({ games }: Props) {
           </div>
       </div>
     </main>
-  );
+    )
 }
