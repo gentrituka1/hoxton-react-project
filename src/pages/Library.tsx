@@ -16,7 +16,7 @@ export function Library({ games, setGames }: Props) {
   return (
     <>
     <LeftSection games={games} setGames={setGames} />
-    <Main games={games} />
+    <Main games={games} setGames={setGames}/>
     </>
   );
 }

@@ -188,10 +188,10 @@ header {
 .scroll-item.selected {
   box-shadow: 0 0 0 4px grey;
 }
-.main-section-bottom-recent-games{
+.main-section-bottom-all-games{
   padding: 10px;
 }
-.main-section-bottom-recent-games h2 {
+.main-section-bottom-all-games h2 {
   color: rgb(172, 169, 169);
   font-size: 1.5rem;
   font-family:'Arial Narrow', Arial, sans-serif;
@@ -208,11 +208,23 @@ header {
 }
 .main-section-bottom-all-games-item:hover{
   transform: scale(1.1);
-  
   cursor: pointer;
 }
 .main-section-bottom-all-games-item img:hover{
   box-shadow: white 0px 0px 15px;
+}
+.main-section-bottom-all-games-item{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px;
+}
+.delete-item{
+  font-size: 1.4rem;
+  color: grey;
+  transition: all 0.5 ease-in-out;
+}
+.delete-item:hover{
+  transform: scale(1.5);
 }
 
 /* footer section */
@@ -254,8 +266,50 @@ footer {
 .footer-right-friends {
   display: grid;
 }
+.add-game{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 5px;
+}
 
 .links{
   text-decoration: none;
   color: #c9cbd3;
+}
+
+.dropup {
+  position: relative;
+  display: inline-block;
+}
+.dropup-content {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  background-color: lightgray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropup-content input {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  outline: none;
+  font-size: 1rem;
+}
+.dropup-content button{
+  color: black;
+  padding: 12px 16px;
+  display: block;
+}
+.dropup-content input:hover,
+.dropup-content button:hover{
+  background-color: #ddd
+}
+.dropup:hover .dropup-content{
+  display: block;
+}
+.dropup:hover .dropbtn{
+  background-color: #2980B9;
 }

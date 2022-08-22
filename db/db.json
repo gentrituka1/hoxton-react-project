@@ -41,7 +41,7 @@
       "name": "PUBG: BattleGrounds",
       "description": "New in PUBG: BattleGrounds",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/578080/capsule_184x69.jpg",
-      "favorite": true,
+      "favorite": false,
       "installed": false,
       "time": "4 hours ago"
     },
@@ -50,7 +50,7 @@
       "name": "Grand Theft Auto V",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/271590/capsule_184x69.jpg",
       "description": "Grand Theft Auto V: New Update Release Notes",
-      "favorite": false,
+      "favorite": true,
       "installed": false,
       "time": "7 hours ago"
     },
@@ -77,7 +77,7 @@
       "name": "Sea of Thieves",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1172620/capsule_184x69.jpg",
       "description": "\"A Hunter's Cry\" is Sea of Tieves Sixth Adventure Live Now",
-      "favorite": false,
+      "favorite": true,
       "installed": false,
       "time": "This Week"
     },
@@ -89,6 +89,14 @@
       "favorite": false,
       "installed": false,
       "time": "Last Week"
+    },
+    {
+      "name": "Steam",
+      "logo": "https://i0.wp.com/www.alphr.com/wp-content/uploads/2022/02/steam6.png?resize=690%2C408&ssl=1",
+      "favorite": false,
+      "installed": false,
+      "time": "Just Now",
+      "id": 11
     }
   ]
 }

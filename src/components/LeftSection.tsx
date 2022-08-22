@@ -4,7 +4,7 @@ import { RiListSettingsFill } from "react-icons/ri";
 import { Game } from "../App";
 import 'react-alice-carousel/lib/alice-carousel.css'
 
-type Props = {
+export type Props = {
   games: Game[];
   setGames: (games: Game[]) => void;
 };

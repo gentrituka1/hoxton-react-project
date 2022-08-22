@@ -34,7 +34,7 @@ function App() {
     <div className="App">
       <Header />
       
-      <Footer/>
+      <Footer games={games} setGames={setGames}/>
       <Routes>
         <Route index element={<Navigate to="/library"/>} />
         <Route path="/library" element={<Library games={games} setGames={setGames}/>} />

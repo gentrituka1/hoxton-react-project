@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Game } from "../App";
+import {MdDelete} from "react-icons/md";
 
 type Props = {
     games: Game[];
+    setGames: (games: Game[]) => void;
   };
 
-export function Main ({ games }: Props) {
+export function Main ({ games, setGames }: Props) {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
 
@@ -74,12 +76,20 @@ export function Main ({ games }: Props) {
         </div>
       </div>
       <div className="main-section-bottom">
-        <div className="main-section-bottom-recent-games">
+        <div className="main-section-bottom-all-games">
           <h2>ALL GAMES({games.length})</h2>
             <div className="main-section-bottom-all-games-list">
               {games.map((game) => 
                 <div className="main-section-bottom-all-games-item">
                     <img src={game.logo} width={300}/>
+                    <MdDelete className="delete-item" onClick={() => {
+                        fetch(`http://localhost:5000/games/${game.id}`, {
+                            method: "DELETE",
+                        }).then(r => r.json())
+                        .then(data => {
+                            setGames(data);
+                        })
+                    }}/>
                 </div>
               )}
             </div>
