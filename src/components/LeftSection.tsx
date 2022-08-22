@@ -2,24 +2,16 @@ import { DOMElement, useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiListSettingsFill } from "react-icons/ri";
 import { Game } from "../App";
+import 'react-alice-carousel/lib/alice-carousel.css'
 
 type Props = {
-    games: Game[];
-    setGames: (games: Game[]) => void
-}
+  games: Game[];
+  setGames: (games: Game[]) => void;
+};
 
-export function LeftSection({games, setGames}: Props) {
-  const [filteredGames, setFilteredGames] = useState<Game[]>([]);
+export function LeftSection({ games, setGames }: Props) {
+  const [value, setValue] = useState("");
   const [toggle, setToggle] = useState(false);
-  const [toggleFavorite, setToggleFavorite] = useState(false);
-
-  useEffect(() => {
-    fetch("http://localhost:4000/games")
-      .then((res) => res.json())
-      .then((gamesFromServer) => {
-        setGames(gamesFromServer);
-      });
-  }, []);
 
   return (
     <section className="left-section">
@@ -36,15 +28,8 @@ export function LeftSection({games, setGames}: Props) {
               event.target.placeholder = "";
             }}
             onChange={(event) => {
-              const gamesCopy = structuredClone(games);
-              const filteredGames = gamesCopy.filter((game) => {
-                return game.name.toLowerCase().includes(event.target.value.toLowerCase());
-              })
-              if(event.target.value === "") 
-              setFilteredGames(gamesCopy);
-              else setFilteredGames(filteredGames);
-            console.log(event.target.value);
-          }} 
+              setValue(event.target.value);
+            }}
           />
         </div>
         <RiListSettingsFill className="left-section-font" />
@@ -52,7 +37,7 @@ export function LeftSection({games, setGames}: Props) {
       <div className="left-section-bottom">
         <div className="left-section-bottom-menu">
           <h2
-            onClick={() => {
+            onClick={(event) => {
               if (toggle === false) {
                 let list = document.getElementById("list1");
                 list.style.display = "none";
@@ -62,13 +47,15 @@ export function LeftSection({games, setGames}: Props) {
                 list.style.display = "block";
                 setToggle(false);
               }
+
+              event.target.textContent = toggle ? "- Favorites" : "+ Favorites";
             }}
           >
             - Favorites
           </h2>
           <div className="left-section-bottom-favorite-list">
             <div id="list1">
-              {filteredGames.map((game) => {
+              {games.filter(game => game.name.toLowerCase().includes(value)).map((game) => {
                 if (game.favorite === true) {
                   return (
                     <li
@@ -107,7 +94,7 @@ export function LeftSection({games, setGames}: Props) {
         </div>
         <div className="left-section-bottom-menu">
           <h2
-            onClick={() => {
+            onClick={(event) => {
               if (toggle === false) {
                 let list = document.getElementById("list2");
                 list.style.display = "none";
@@ -117,18 +104,20 @@ export function LeftSection({games, setGames}: Props) {
                 list.style.display = "block";
                 setToggle(false);
               }
+
+              event.target.textContent = toggle
+                ? "- Uncategorized"
+                : "+ Uncategorized";
             }}
           >
             - Uncategorized
           </h2>
           <div className="left-section-bottom-uncategorized-list" id="list2">
-            {filteredGames.map((game) => {
+            {games.filter(game => game.name.toLowerCase().includes(value)).map((game) => {
               return (
                 <li
                   key={game.id}
-                  onClick={() => {
-
-                  }}
+                  onClick={() => {}}
                   onDoubleClick={() => {
                     fetch(`http://localhost:4000/games/${game.id}`, {
                       method: "PATCH",

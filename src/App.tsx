@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { IoMdArrowRoundForward } from "react-icons/io";
@@ -23,6 +23,14 @@ export type Game = {
 
 function App() {
   const [games, setGames] = useState<Game[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/games")
+      .then((res) => res.json())
+      .then((gamesFromServer) => {
+        setGames(gamesFromServer);
+      });
+  }, []);
 
   return (
     <div className="App">

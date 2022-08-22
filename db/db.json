@@ -12,7 +12,7 @@
       "name": "Counter Strike: Global Offensive",
       "description": "Happy Birthday CS:GO",
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/730/capsule_184x69.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 3,
