@@ -34,7 +34,7 @@ export function Footer({ games, setGames }: Props) {
               });
 
             event.target.reset();
-
+            
             location.reload();
           }}
         >

@@ -89,14 +89,6 @@
       "favorite": false,
       "installed": false,
       "time": "Last Week"
-    },
-    {
-      "name": "Steam",
-      "logo": "https://i0.wp.com/www.alphr.com/wp-content/uploads/2022/02/steam6.png?resize=690%2C408&ssl=1",
-      "favorite": false,
-      "installed": false,
-      "time": "Just Now",
-      "id": 11
     }
   ]
 }

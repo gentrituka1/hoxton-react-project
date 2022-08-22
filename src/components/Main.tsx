@@ -83,12 +83,13 @@ export function Main ({ games, setGames }: Props) {
                 <div className="main-section-bottom-all-games-item">
                     <img src={game.logo} width={300}/>
                     <MdDelete className="delete-item" onClick={() => {
-                        fetch(`http://localhost:5000/games/${game.id}`, {
+                        fetch(`http://localhost:4000/games/${game.id}`, {
                             method: "DELETE",
                         }).then(r => r.json())
                         .then(data => {
                             setGames(data);
                         })
+                        location.reload()
                     }}/>
                 </div>
               )}
