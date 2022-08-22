@@ -5,22 +5,14 @@ import { Game } from "../App";
 
 type Props = {
   games: Game[];
-  setGames: (games: Game[]) => void;
 };
 
-export function Main({ games, setGames }: Props) {
+export function Main({ games }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [toggleSelected, setToggleSelected] = useState(false);
+
 
   useEffect(() => {
-    fetch("http://localhost:4000/games")
-      .then((res) => res.json())
-      .then((gamesFromServer) => {
-        setGames(gamesFromServer);
-      });
-  }, []);
-
-  useEffect(() => {
+    if(games.length === 0) return
     const game = games[selectedIndex];
     const gameEl = document.querySelector(`#game-${game.id}`);
     if (gameEl) {
@@ -42,7 +34,7 @@ export function Main({ games, setGames }: Props) {
     <main className="main-section">
       <div className="main-section-top">
         <div className="whats-new">
-          <h2>What's New</h2>
+          <h2>WHAT'S NEW</h2>
           <div className="whats-new-arrows">
             <h1
               className="clickable"
@@ -66,9 +58,7 @@ export function Main({ games, setGames }: Props) {
           {games.map((game, index) => (
             <div
               onClick={() => {
-                setToggleSelected(!toggleSelected);
-
-                toggleSelected ? setSelectedIndex(index) : setSelectedIndex(0);
+                setSelectedIndex(index);
               }}
               key={game.id}
               className={`scroll-item ${
@@ -76,8 +66,8 @@ export function Main({ games, setGames }: Props) {
               }`}
               id={`game-${game.id}`}
             >
-              <h4>This Week</h4>
-              <img src={game.logo} />
+              <h4>{game.time}</h4>
+              <img src={game.logo} width={300}/>
               <p>{game.description}</p>
               <h3>{game.name}</h3>
             </div>

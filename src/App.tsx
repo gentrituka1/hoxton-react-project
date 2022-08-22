@@ -18,6 +18,8 @@ export type Game = {
   logo: string;
   favorite: boolean;
   description: string;
+  installed: boolean;
+  time: string;
 };
 
 
@@ -32,11 +34,13 @@ function App() {
       });
   }, []);
 
+  console.log(games)
+
   return (
     <div className="App">
       <Header />
       <LeftSection games={games} setGames={setGames} />
-      <Main games={games} setGames={setGames}/>
+      <Main games={games}/>
       <Footer />
     </div>
   );
