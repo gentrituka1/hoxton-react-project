@@ -48,6 +48,27 @@
       "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1506830/capsule_184x69.jpg",
       "description": "FIFA 23: Pre-Order Now",
       "favorite": false
+    },
+    {
+      "id": 8,
+      "name": "Rocket League",
+      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/252950/capsule_184x69.jpg",
+      "description": "Explore the New Car: Rocket League",
+      "favorite": false
+    },
+    {
+      "id": 9,
+      "name": "Sea of Thieves",
+      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1172620/capsule_184x69.jpg",
+      "description": "\"A Hunter's Cry\" is Sea of Tieves Sixth Adventure Live Now",
+      "favorite": false
+    },
+    {
+      "id": 10,
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/359550/capsule_184x69.jpg",
+      "description": "Anti-Cheat Status Update: Rainbow Six Siege",
+      "favorite": false
     }
   ]
 }

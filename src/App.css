@@ -128,7 +128,7 @@ header {
 }
 .main-section-top{
     padding: 10px;
-    border-bottom: black 1px solid;
+    border-bottom: white 2px dotted;
 }
 .main-section-top-news-list{
   list-style: none;
@@ -136,6 +136,25 @@ header {
 .main-section-top-news-div img{
   width: 250px;
   height: 179px;
+}
+.scroller{
+    max-width: 1550px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+  
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 2rem 1rem;
+}
+.scroll-item {
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+.scroll-item.selected {
+  box-shadow: 0 0 0 4px grey;
+  padding: 10px;
 }
 
 /* footer section */

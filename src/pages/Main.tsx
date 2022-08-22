@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import { Game } from "../App";
 
 type Props = {
@@ -7,6 +9,9 @@ type Props = {
 };
 
 export function Main({ games, setGames }: Props) {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [toggleSelected, setToggleSelected] = useState(false);
+
   useEffect(() => {
     fetch("http://localhost:4000/games")
       .then((res) => res.json())
@@ -15,6 +20,24 @@ export function Main({ games, setGames }: Props) {
       });
   }, []);
 
+  useEffect(() => {
+    const game = games[selectedIndex];
+    const gameEl = document.querySelector(`#game-${game.id}`);
+    if (gameEl) {
+      gameEl.scrollIntoView({ inline: "center" });
+    }
+  }, [games, selectedIndex]);
+
+  function previous() {
+    let newIndex = selectedIndex === 0 ? games.length - 1 : selectedIndex - 1;
+    setSelectedIndex(newIndex);
+  }
+
+  function next() {
+    let newIndex = selectedIndex === games.length - 1 ? 0 : selectedIndex + 1;
+    setSelectedIndex(newIndex);
+  }
+
   return (
     <main className="main-section">
       <div className="main-section-top">
@@ -22,40 +45,43 @@ export function Main({ games, setGames }: Props) {
           <h2>What's New</h2>
           <div className="whats-new-arrows">
             <h1
-            className="clickable"
-              onClick={(event) => {
-                let clickedIndex = 0;
-                if (clickedIndex < 2) {
-                  clickedIndex++;
-                  event.target.style.marginLeft = `-190*${clickedIndex}px`;
-                }
+              className="clickable"
+              onClick={() => {
+                previous();
               }}
             >
               ←
             </h1>
             <h1
-            className="clickable"
-              onClick={(event) => {
-                let clickedIndex = 0;
-                if (clickedIndex > 0) {
-                  clickedIndex--;
-                  event.target.style.marginLeft = `-190*${clickedIndex}px`;
-                }
+              className="clickable"
+              onClick={() => {
+                next();
               }}
             >
               →
             </h1>
           </div>
         </div>
-          <div className="main-section-top-news" >
-            {games.map((game) => (
-              <div key={game.id} className="main-section-top-news-div">
-                <h4>This Week</h4>
-                <img src={game.logo} />
-                <p>{game.description}</p>
-                <h3>{game.name}</h3>
-              </div>
-            ))}
+        <div className="main-section-top-news scroller">
+          {games.map((game, index) => (
+            <div
+              onClick={() => {
+                setToggleSelected(!toggleSelected);
+
+                toggleSelected ? setSelectedIndex(index) : setSelectedIndex(0);
+              }}
+              key={game.id}
+              className={`scroll-item ${
+                selectedIndex === index ? "selected" : ""
+              }`}
+              id={`game-${game.id}`}
+            >
+              <h4>This Week</h4>
+              <img src={game.logo} />
+              <p>{game.description}</p>
+              <h3>{game.name}</h3>
+            </div>
+          ))}
         </div>
       </div>
       <div className="main-section-bottom"></div>
