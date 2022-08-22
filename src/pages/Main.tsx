@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import AliceCarousel from "react-alice-carousel";
 import { Game } from "../App";
 
 type Props = {
@@ -50,7 +49,12 @@ export function Main({ games, setGames }: Props) {
         </div>
           <div className="main-section-top-news" >
             {games.map((game) => (
-              <AliceCarousel mouseTracking games={games} />
+              <div key={game.id} className="main-section-top-news-div">
+                <h4>This Week</h4>
+                <img src={game.logo} />
+                <p>{game.description}</p>
+                <h3>{game.name}</h3>
+              </div>
             ))}
         </div>
       </div>
