@@ -16,7 +16,8 @@ export type Game = {
   installed: boolean;
   time: string;
   price: number | string;
-  platform: "PC" | "PC PS5" | "PC PS5 Xbox One"
+  platform: "PC" | "PC PS5" | "PC PS5 Xbox One";
+  bought: boolean;
 };
 
 

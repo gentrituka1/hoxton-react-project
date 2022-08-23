@@ -1,20 +1,55 @@
 /* main section of store page */
 .main-store-section{
-  background-color: #184150;
+  background-color: #184150
 }
 .store-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 .store-all-game{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 20px;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    padding: 10px;
-  }
-  .store-game-info{
-    display: grid;
-    align-self: center;
-  }
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.store-all-game img{
+  width: 100%;
+  background-color:bisque;
+}
+.store-game-info{
+  display: grid;
+  align-items: end;
+  padding: 10px;
+  color: white;
+}
+
+.store-game-info-price{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+.buy-game{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.buy-game h2{
+  font-family:'Courier New', Courier, monospace;
+  color: yellow;
+}
+.buy-game button{
+  width: 100px;
+  height: 50px;
+  background-color: #1bb251;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  transition: all 0.6s ease-in-out;
+}
+.buy-game button:hover{
+  transform: scale(1.1);
+  border-radius: 0px;
+  cursor: pointer;
+}

@@ -8,6 +8,8 @@
       "favorite": true,
       "time": "30 minutes ago",
       "price": 8.99,
+      "bought": true,
+      "installed": false,
       "platform": "PC"
     },
     {
@@ -18,6 +20,8 @@
       "favorite": true,
       "time": "1 hour ago",
       "price": "Free",
+      "bought": false,
+      "installed": false,
       "platform": "PC"
     },
     {
@@ -25,9 +29,11 @@
       "name": "Dota 2",
       "description": "Dev Update: Dota 2 Upcoming Changes",
       "logo": "/Public/images/dota-2.png",
-      "favorite": true,
+      "favorite": false,
       "time": "Today",
       "price": "Free",
+      "bought": false,
+      "installed": false,
       "platform": "PC"
     },
     {
@@ -38,6 +44,8 @@
       "favorite": true,
       "time": "Today",
       "price": "Free",
+      "bought": false,
+      "installed": false,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -45,9 +53,11 @@
       "name": "PUBG: BattleGrounds",
       "description": "New in PUBG: BattleGrounds",
       "logo": "/Public/images/pubg.svg",
-      "favorite": true,
+      "favorite": false,
       "time": "Today",
       "price": "Free",
+      "bought": false,
+      "installed": false,
       "platform": "PC PS5"
     },
     {
@@ -58,6 +68,8 @@
       "favorite": true,
       "time": "Today",
       "price": 14.99,
+      "bought": false,
+      "installed": false,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -65,9 +77,11 @@
       "name": "FIFA 22",
       "logo": "/Public/images/fifa22.svg",
       "description": "FIFA 23: Pre-Order Now",
-      "favorite": true,
+      "favorite": false,
       "time": "Yesterday",
       "price": 49.99,
+      "bought": false,
+      "installed": false,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -75,9 +89,11 @@
       "name": "Rocket League",
       "logo": "/Public/images/rocket-league.svg",
       "description": "Explore the New Car: Rocket League",
-      "favorite": false,
+      "favorite": true,
       "time": "Yesterday",
       "price": "Free",
+      "bought": false,
+      "installed": false,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -88,6 +104,8 @@
       "favorite": false,
       "time": "This Week",
       "price": 19.99,
+      "bought": false,
+      "installed": false,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -98,6 +116,8 @@
       "favorite": false,
       "time": "Last Week",
       "price": 6.99,
+      "bought": false,
+      "installed": false,
       "platform": "PC"
     }
   ]

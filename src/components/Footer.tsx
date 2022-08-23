@@ -25,6 +25,8 @@ export function Footer({ games, setGames }: Props) {
                 description: "",
                 favorite: false,
                 installed: false,
+                bought: true,
+                platform: "PC",
                 time: "Just Now",
               }),
             })
