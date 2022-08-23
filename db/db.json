@@ -8,7 +8,7 @@
       "favorite": true,
       "time": "30 minutes ago",
       "price": 8.99,
-      "bought": true,
+      "bought": false,
       "installed": false,
       "platform": "PC"
     },
@@ -119,6 +119,16 @@
       "bought": false,
       "installed": false,
       "platform": "PC"
+    }
+  ],
+  "users" : [
+    {
+      "id": 1,
+      "nickname": "gennt-",
+      "avatar": "/Public/images/avatar.svg",
+      "email": "gentrit@gmail.com",
+      "password": "123456",
+      "loggedIn": true
     }
   ]
 }

@@ -49,6 +49,11 @@ header {
   color: white;
   padding-right: 10px;
 }
+.log{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+}
 
 /* left section */
 

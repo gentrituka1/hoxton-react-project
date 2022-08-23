@@ -20,9 +20,27 @@ export type Game = {
   bought: boolean;
 };
 
+export type User = {
+  id: number;
+  nickname: string;
+  avatar: string;
+  email: string;
+  password: string;
+  loggedIn: boolean;
+}
 
 function App() {
   const [games, setGames] = useState<Game[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/users")
+      .then((res) => res.json())
+      .then((usersFromServer) => {
+        setUsers(usersFromServer);
+      })
+  }, [])
+
 
   useEffect(() => {
     fetch("http://localhost:4000/games")
@@ -31,8 +49,6 @@ function App() {
         setGames(gamesFromServer);
       });
   }, []);
-
-  console.log(games)
 
   return (
     <div className="App">
