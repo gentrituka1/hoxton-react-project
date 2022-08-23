@@ -68,7 +68,7 @@ export function Main ({ games, setGames }: Props) {
               id={`game-${game.id}`}
             >
               <h4>{game.time}</h4>
-              <img src={game.logo} width={300}/>
+              <img src={game.logo} width={200}/>
               <p>{game.description}</p>
               <h3>{game.name}</h3>
             </div>

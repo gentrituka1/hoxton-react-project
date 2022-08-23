@@ -162,6 +162,7 @@ header {
     gap: 1rem;
   
     overflow-x: scroll;
+    overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior:  smooth;
     padding: 1rem 1rem;

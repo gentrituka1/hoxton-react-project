@@ -1,0 +1,6 @@
+/* main section of store page */
+
+.store-all-games{
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }

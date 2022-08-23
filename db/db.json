@@ -4,86 +4,94 @@
       "id": 1,
       "name": "Counter Strike",
       "description": "Bug fixes and improvements to the game",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/10/capsule_sm_120.jpg",
+      "logo": "/Public/images/counter-strike.svg",
       "favorite": true,
       "time": "30 minutes ago",
-      "price": 8.99
+      "price": 8.99,
+      "platform": "PC" 
     },
     {
       "id": 2,
       "name": "Counter Strike: Global Offensive",
       "description": "Happy Birthday CS:GO",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/730/capsule_184x69.jpg",
+      "logo": "/Public/images/csgo.svg",
       "favorite": true,
       "time": "1 hour ago",
-      "price": "Free"
+      "price": "Free",
+      "platform": "PC" 
     },
     {
       "id": 3,
       "name": "Dota 2",
       "description": "Dev Update: Dota 2 Upcoming Changes",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/570/capsule_184x69.jpg",
+      "logo": "/Public/images/dota-2.png",
       "favorite": true,
-      "time": "Free"
+      "platform": "PC" 
     },
     {
       "id": 4,
       "name": "Apex Legends",
       "description": "Meet Vantage | Apex Legends Character Trailer",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1172470/capsule_184x69.jpg",
+      "logo": "/Public/images/apex-legends.svg",
       "favorite": true,
-      "time": "Free"
+      "platform": "PC PS5 Xbox One" 
     },
     {
       "id": 5,
       "name": "PUBG: BattleGrounds",
       "description": "New in PUBG: BattleGrounds",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/578080/capsule_184x69.jpg",
+      "logo": "/Public/images/pubg.svg",
       "favorite": false,
-      "time": "Free"
+      "time": "Free",
+      "platform": "PC PS5" 
     },
     {
       "id": 6,
       "name": "Grand Theft Auto V",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/271590/capsule_184x69.jpg",
+      "logo": "/Public/images/grand-theft-auto-v.svg",
       "description": "Grand Theft Auto V: New Update Release Notes",
       "favorite": false,
-      "time": 14.99
+      "time": 14.99,
+      "platform": "PC PS5 Xbox One" 
     },
     {
       "id": 7,
       "name": "FIFA 22",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1506830/capsule_184x69.jpg",
+      "logo": "/Public/images/fifa22.svg",
       "description": "FIFA 23: Pre-Order Now",
       "favorite": true,
-      "time": 49.99
+      "time": 49.99,
+      "platform": "PC PS5 Xbox One" 
     },
     {
       "id": 8,
       "name": "Rocket League",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/252950/capsule_184x69.jpg",
+      "logo": "/Public/images/rocket-league.svg",
       "description": "Explore the New Car: Rocket League",
       "favorite": false,
       "time": "Today",
-      "price": "Free"
+      "price": "Free",
+      "platform": "PC PS5 Xbox One" 
     },
     {
       "id": 9,
       "name": "Sea of Thieves",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/1172620/capsule_184x69.jpg",
+      "logo": "/Public/images/sea-of-thieves.svg",
       "description": "\"A Hunter's Cry\" is Sea of Tieves Sixth Adventure Live Now",
       "favorite": true,
       "time": "This Week",
-      "price": 19.99
+      "price": 19.99,
+      "platform": "PC PS5 Xbox One" 
     },
     {
       "id": 10,
       "name": "Tom Clancy's Rainbow Six Siege",
-      "logo": "https://steamcdn-a.akamaihd.net/steam/apps/359550/capsule_184x69.jpg",
+      "logo": "/Public/images/rainbow-6-siege.svg",
       "description": "Anti-Cheat Status Update: Rainbow Six Siege",
       "favorite": false,
       "time": "Last Week",
-      "price": 6.99
+      "price": 6.99,
+      "platform": "PC" 
     }
   ]
 }
