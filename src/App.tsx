@@ -36,13 +36,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      
-      <Footer games={games} setGames={setGames}/>
       <Routes>
         <Route index element={<Navigate to="/library"/>} />
         <Route path="/library" element={<Library games={games} setGames={setGames}/>} />
         <Route path="/store" element={<Store games={games} setGames={setGames}/>}/>
       </Routes>
+      <Footer games={games} setGames={setGames}/>
     </div>
   );
 }

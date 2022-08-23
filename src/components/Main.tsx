@@ -16,7 +16,7 @@ export function Main ({ games, setGames }: Props) {
       const game = games[selectedIndex];
       const gameEl = document.querySelector(`#game-${game.id}`);
       if (gameEl) {
-        gameEl.scrollIntoView({ inline: "center" });
+        gameEl.scrollIntoView({ block: "center",  inline: "center" });
       }
     }, [games, selectedIndex]);
   
@@ -68,7 +68,7 @@ export function Main ({ games, setGames }: Props) {
               id={`game-${game.id}`}
             >
               <h4>{game.time}</h4>
-              <img src={game.logo} width={200}/>
+              <img src={game.logo} width={200} height={100}/>
               <p>{game.description}</p>
               <h3>{game.name}</h3>
             </div>
@@ -81,8 +81,9 @@ export function Main ({ games, setGames }: Props) {
             <div className="main-section-bottom-all-games-list">
               {games.map((game) => 
                 <div className="main-section-bottom-all-games-item">
-                    <img src={game.logo} width={300}/>
+                    <img src={game.logo} width={200}/>
                     <MdDelete className="delete-item" onClick={() => {
+                        if(window.confirm("Are you sure you want to delete this game?")) {
                         fetch(`http://localhost:4000/games/${game.id}`, {
                             method: "DELETE",
                         }).then(r => r.json())
@@ -90,6 +91,7 @@ export function Main ({ games, setGames }: Props) {
                             setGames(data);
                         })
                         location.reload()
+                      } else return
                     }}/>
                 </div>
               )}

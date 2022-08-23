@@ -1,17 +1,17 @@
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { Props } from "../components/LeftSection";
+import "./Store.css"
+import { LeftSection, Props } from "../components/LeftSection";
 
 
 
 export function Store ({games, setGames}: Props) {
     return (
         <>
+        <LeftSection games={games} setGames={setGames}/>
         <main className="main-store-section">
             <div className="store-container">
                 {games.map((game) => (
-                    <div className="store-all-games" key={game.id}>
-                        <img src={game.logo} alt={game.name} width={350} height={170}/>
+                    <div className="store-all-game" key={game.id}>
+                        <img src={game.logo} alt={game.name} width={200} height={170}/>
                         <div className="store-game-info">
                             <h2>{game.name}</h2>
                             <div className="store-game-info-price">

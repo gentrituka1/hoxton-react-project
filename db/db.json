@@ -8,7 +8,7 @@
       "favorite": true,
       "time": "30 minutes ago",
       "price": 8.99,
-      "platform": "PC" 
+      "platform": "PC"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "favorite": true,
       "time": "1 hour ago",
       "price": "Free",
-      "platform": "PC" 
+      "platform": "PC"
     },
     {
       "id": 3,
@@ -26,7 +26,9 @@
       "description": "Dev Update: Dota 2 Upcoming Changes",
       "logo": "/Public/images/dota-2.png",
       "favorite": true,
-      "platform": "PC" 
+      "time": "Today",
+      "price": "Free",
+      "platform": "PC"
     },
     {
       "id": 4,
@@ -34,25 +36,29 @@
       "description": "Meet Vantage | Apex Legends Character Trailer",
       "logo": "/Public/images/apex-legends.svg",
       "favorite": true,
-      "platform": "PC PS5 Xbox One" 
+      "time": "Today",
+      "price": "Free",
+      "platform": "PC PS5 Xbox One"
     },
     {
       "id": 5,
       "name": "PUBG: BattleGrounds",
       "description": "New in PUBG: BattleGrounds",
       "logo": "/Public/images/pubg.svg",
-      "favorite": false,
-      "time": "Free",
-      "platform": "PC PS5" 
+      "favorite": true,
+      "time": "Today",
+      "price": "Free",
+      "platform": "PC PS5"
     },
     {
       "id": 6,
       "name": "Grand Theft Auto V",
       "logo": "/Public/images/grand-theft-auto-v.svg",
       "description": "Grand Theft Auto V: New Update Release Notes",
-      "favorite": false,
-      "time": 14.99,
-      "platform": "PC PS5 Xbox One" 
+      "favorite": true,
+      "time": "Today",
+      "price": 14.99,
+      "platform": "PC PS5 Xbox One"
     },
     {
       "id": 7,
@@ -60,8 +66,9 @@
       "logo": "/Public/images/fifa22.svg",
       "description": "FIFA 23: Pre-Order Now",
       "favorite": true,
-      "time": 49.99,
-      "platform": "PC PS5 Xbox One" 
+      "time": "Yesterday",
+      "price": 49.99,
+      "platform": "PC PS5 Xbox One"
     },
     {
       "id": 8,
@@ -69,19 +76,19 @@
       "logo": "/Public/images/rocket-league.svg",
       "description": "Explore the New Car: Rocket League",
       "favorite": false,
-      "time": "Today",
+      "time": "Yesterday",
       "price": "Free",
-      "platform": "PC PS5 Xbox One" 
+      "platform": "PC PS5 Xbox One"
     },
     {
       "id": 9,
       "name": "Sea of Thieves",
       "logo": "/Public/images/sea-of-thieves.svg",
       "description": "\"A Hunter's Cry\" is Sea of Tieves Sixth Adventure Live Now",
-      "favorite": true,
+      "favorite": false,
       "time": "This Week",
       "price": 19.99,
-      "platform": "PC PS5 Xbox One" 
+      "platform": "PC PS5 Xbox One"
     },
     {
       "id": 10,
@@ -91,7 +98,7 @@
       "favorite": false,
       "time": "Last Week",
       "price": 6.99,
-      "platform": "PC" 
+      "platform": "PC"
     }
   ]
 }
