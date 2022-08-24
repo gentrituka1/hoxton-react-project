@@ -15,8 +15,8 @@ export function SignIn({ games, setGames }: Props) {
           </div>
           <form className="signin-form">
             <label>
-              Account name
-              <input type="text" placeholder="Email or username..." />
+              Username
+              <input type="text" placeholder="Username or Email..." />
             </label>
             <label>
               Password

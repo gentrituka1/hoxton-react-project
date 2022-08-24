@@ -3,7 +3,7 @@
     place-content: center;
     background: -webkit-linear-gradient(top, #51789e, #b7b8b9);
   }
-  .signin-container {
+  .signup-container {
     display: grid;
     place-content: center;
     gap: 20px;
@@ -28,7 +28,7 @@
     color: #b3b4b4;
     font-size: 4rem;
   }
-  .signin-form {
+  .signup-form {
     padding: 10px;
     justify-self: center;
     border-bottom: 1px solid grey;
@@ -36,7 +36,7 @@
     display: grid;
     gap: 20px;
   }
-  .signin-form input {
+  .signup-form input {
     width: 658px;
     height: 44px;
     font-size: 1.2rem;
@@ -44,10 +44,10 @@
     border: none;
     border: 1px solid rgb(112, 112, 230);
   }
-  .signin-form input::placeholder {
+  .signup-form input::placeholder {
     font-size: 1.2rem;
   }
-  .signin-form label {
+  .signup-form label {
     display: grid;
     grid-auto-flow: column;
     justify-content: end;
@@ -55,13 +55,13 @@
     font-size: 1.4rem;
     color: #b3b4b4;
   }
-  .signin-form-buttons {
+  .signup-form-buttons {
     justify-self: end;
     display: grid;
     grid-auto-flow: column;
     gap: 14px;
   }
-  .signin-form-buttons button {
+  .signup-form-buttons button {
     width: 324px;
     height: 60px;
     text-align: start;
@@ -70,11 +70,11 @@
     border: none;
     color: #b3b4b4;
   }
-  .signin-form-buttons button:hover {
+  .signup-form-buttons button:hover {
     background-color: #484d58;
     cursor: pointer;
   }
-  .signin-container-footer {
+  .signup-container-footer {
     padding: 10px 0px;
     justify-self: center;
     display: grid;
@@ -83,7 +83,7 @@
     justify-content: start;
     align-items: center;
   }
-  .signin-container-footer button {
+  .signup-container-footer button {
     width: 476px;
     height: 52px;
     font-size: 1.4rem;
@@ -91,11 +91,11 @@
     border: none;
     color: #b3b4b4;
   }
-  .signin-container-footer button:hover {
+  .signup-container-footer button:hover {
     background-color: #484d58;
     cursor: pointer;
   }
-  .signin-container-footer span {
+  .signup-container-footer span {
     font-size: 1.4rem;
     color: #b3b4b4;
   }

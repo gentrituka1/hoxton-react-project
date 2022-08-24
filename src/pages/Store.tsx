@@ -1,10 +1,12 @@
 import "./Store.css"
 import { LeftSection, Props } from "../components/LeftSection";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 
 
 export function Store ({games, setGames}: Props) {
+    const [toggleBought, setToggleBought] = useState(false);
 
     let navigate = useNavigate()
 
@@ -21,22 +23,40 @@ export function Store ({games, setGames}: Props) {
                                 <h2>{game.name}</h2>
                                 <button
                                 onClick={() => {
+                                    setToggleBought(!toggleBought)
+                                    if(toggleBought){
                                     fetch(`http://localhost:4000/games/${game.id}`, {
                                         method: "PATCH",
                                         headers: {
                                             "Content-Type": "application/json"
                                             },
                                             body: JSON.stringify({
-                                                bought: true,
+                                                bought: !game.bought,
+                                                favorite: false
                                             })
                                     }).then((res) => res.json())
                                     .then((gamesFromServer) => {
                                         setGames(gamesFromServer);
                                     })
-                                    
+                                } else {
+                                    fetch(`http://localhost:4000/games/${game.id}`, {
+                                        method: "PATCH",
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                            },
+                                            body: JSON.stringify({
+                                                bought: !game.bought,
+                                                favorite: false
+                                            })
+                                    }).then((res) => res.json())
+                                    .then((gamesFromServer) => {
+                                        setGames(gamesFromServer);
+                                    })
+                                }
 
                                     location.reload()
                                 }}
+                                
                                 >{game.bought ? "Already in Library" : "Buy"}</button>
                             </div>
                             <div className="store-game-info-price">

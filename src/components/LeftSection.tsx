@@ -56,7 +56,7 @@ export function LeftSection({ games, setGames }: Props) {
           <div className="left-section-bottom-favorite-list">
             <div id="list1">
               {games.filter(game => game.name.toLowerCase().includes(value)).map((game) => {
-                if (game.favorite === true) {
+                if (game.favorite === true && game.bought === true) {
                   return (
                     <li
                       key={game.id}
@@ -114,6 +114,7 @@ export function LeftSection({ games, setGames }: Props) {
           </h2>
           <div className="left-section-bottom-uncategorized-list" id="list2">
             {games.filter(game => game.name.toLowerCase().includes(value)).map((game) => {
+              if (game.favorite === false && game.bought === true) {
               return (
                 <li
                   key={game.id}
@@ -149,7 +150,7 @@ export function LeftSection({ games, setGames }: Props) {
                   ) : null}
                 </li>
               );
-            })}
+            }})}
           </div>
         </div>
       </div>

@@ -10,7 +10,6 @@
       "price": 8.99,
       "discountedPrice": 5.99,
       "bought": true,
-      "installed": false,
       "platform": "PC"
     },
     {
@@ -18,11 +17,10 @@
       "name": "Counter Strike: Global Offensive",
       "description": "Happy Birthday CS:GO",
       "logo": "/Public/images/csgo.svg",
-      "favorite": true,
+      "favorite": false,
       "time": "1 hour ago",
       "price": "Free",
-      "bought": false,
-      "installed": false,
+      "bought": true,
       "platform": "PC"
     },
     {
@@ -34,7 +32,6 @@
       "time": "Today",
       "price": "Free",
       "bought": false,
-      "installed": false,
       "platform": "PC"
     },
     {
@@ -42,11 +39,10 @@
       "name": "Apex Legends",
       "description": "Meet Vantage | Apex Legends Character Trailer",
       "logo": "/Public/images/apex-legends.svg",
-      "favorite": true,
+      "favorite": false,
       "time": "Today",
       "price": "Free",
-      "bought": false,
-      "installed": false,
+      "bought": true,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -58,7 +54,6 @@
       "time": "Today",
       "price": "Free",
       "bought": false,
-      "installed": false,
       "platform": "PC PS5"
     },
     {
@@ -71,7 +66,6 @@
       "price": 14.99,
       "discountedPrice": 7.99,
       "bought": false,
-      "installed": false,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -84,7 +78,6 @@
       "price": 49.99,
       "discountedPrice": 9.99,
       "bought": false,
-      "installed": false,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -96,7 +89,6 @@
       "time": "Yesterday",
       "price": "Free",
       "bought": false,
-      "installed": false,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -109,7 +101,6 @@
       "price": 19.99,
       "discountedPrice": 6.99,
       "bought": false,
-      "installed": false,
       "platform": "PC PS5 Xbox One"
     },
     {
@@ -121,7 +112,6 @@
       "time": "Last Week",
       "price": 6.99,
       "bought": false,
-      "installed": false,
       "platform": "PC"
     }
   ],

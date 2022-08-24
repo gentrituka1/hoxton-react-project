@@ -8,15 +8,15 @@ export function SignUp ({ games, setGames }: Props) {
         <>
           <LeftSection games={games} setGames={setGames} />
           <main className="main-signup-section">
-            <div className="signin-container">
+            <div className="signup-container">
               <div className="steam-logo">
                 <SiSteam className="steam-logo-icon" />
                 <span>Steam</span>
               </div>
-              <form className="signin-form">
+              <form className="signup-form">
                 <label>
-                  Account name
-                  <input type="text" placeholder="Username..." />
+                  Nickname 
+                  <input name="nickname" type="text" placeholder="Username..." />
                 </label>
                 <label>
                   Email
@@ -26,12 +26,12 @@ export function SignUp ({ games, setGames }: Props) {
                   Password
                   <input type="password" placeholder="Password..." />
                 </label>
-                <div className="signin-form-buttons">
+                <div className="signup-form-buttons">
                   <button>SIGNUP</button>
                   <button>Cancel</button>
                 </div>
               </form>
-              <div className="signin-container-footer">
+              <div className="signup-container-footer">
                 <span>Already have an account?</span>
                 <Link to="/signin">
                   <button>LOGIN IN</button>
