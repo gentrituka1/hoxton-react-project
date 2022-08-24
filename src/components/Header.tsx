@@ -27,16 +27,13 @@ export function Header() {
       </div>
       <div className="user">
         <img />
-        {user.loggedIn ? (
-          <h1>Profile</h1>
-        ) : (
-          <>
+        
             <div className="log">
               <h1>Login</h1>
               <h1>Sign Up</h1>
             </div>
-          </>
-        )}
+          
+  
       </div>
     </header>
   );

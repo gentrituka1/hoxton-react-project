@@ -40,7 +40,16 @@ export function Store ({games, setGames}: Props) {
                                 >{game.bought ? "Already in Library" : "Buy"}</button>
                             </div>
                             <div className="store-game-info-price">
-                                <h3>{game.price === "Free" ? "Free" : `${game.price}$`}</h3>
+                               {game.discountedPrice ? 
+                               
+                                <div className="store-game-info-price-old">
+                                    <h2 className="discounted-price">{game.price}</h2>
+                                    <h2 className="price-tag">{game.discountedPrice}</h2>
+                                </div>
+                               
+                               :
+                                <h2 className="price-tag">{game.price}</h2>
+                            }
                                 <h3>{game.platform}</h3>
                             </div>
                         </div>

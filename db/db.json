@@ -8,7 +8,8 @@
       "favorite": true,
       "time": "30 minutes ago",
       "price": 8.99,
-      "bought": false,
+      "discountedPrice": 5.99,
+      "bought": true,
       "installed": false,
       "platform": "PC"
     },
@@ -68,6 +69,7 @@
       "favorite": true,
       "time": "Today",
       "price": 14.99,
+      "discountedPrice": 7.99,
       "bought": false,
       "installed": false,
       "platform": "PC PS5 Xbox One"
@@ -80,6 +82,7 @@
       "favorite": false,
       "time": "Yesterday",
       "price": 49.99,
+      "discountedPrice": 9.99,
       "bought": false,
       "installed": false,
       "platform": "PC PS5 Xbox One"
@@ -104,6 +107,7 @@
       "favorite": false,
       "time": "This Week",
       "price": 19.99,
+      "discountedPrice": 6.99,
       "bought": false,
       "installed": false,
       "platform": "PC PS5 Xbox One"
@@ -121,7 +125,7 @@
       "platform": "PC"
     }
   ],
-  "users" : [
+  "users": [
     {
       "id": 1,
       "nickname": "gennt-",
