@@ -29,7 +29,7 @@ export function Header() {
         <img />
         
             <div className="log">
-              <h1>Login</h1>
+              <Link className="links" to="/signin"><h1>Login</h1></Link>
               <h1>Sign Up</h1>
             </div>
           

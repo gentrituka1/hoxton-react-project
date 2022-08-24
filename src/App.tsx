@@ -6,6 +6,7 @@ import { Library } from "./pages/Library";
 import { Footer } from "./components/Footer";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Store } from "./pages/Store";
+import { SignIn } from "./pages/SignIn";
 
 export type Game = {
   id: number;
@@ -58,6 +59,7 @@ function App() {
         <Route index element={<Navigate to="/library"/>} />
         <Route path="/library" element={<Library games={games} setGames={setGames}/>} />
         <Route path="/store" element={<Store games={games} setGames={setGames}/>}/>
+        <Route path="/signin" element={<SignIn games={games} setGames={setGames}/>}/>
       </Routes>
       <Footer games={games} setGames={setGames}/>
     </div>
