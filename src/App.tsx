@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Store } from "./pages/Store";
 import { SignIn } from "./pages/SignIn";
+import { SignUp } from "./pages/SignUp";
 
 export type Game = {
   id: number;
@@ -60,6 +61,7 @@ function App() {
         <Route path="/library" element={<Library games={games} setGames={setGames}/>} />
         <Route path="/store" element={<Store games={games} setGames={setGames}/>}/>
         <Route path="/signin" element={<SignIn games={games} setGames={setGames}/>}/>
+        <Route path="/signup" element={<SignUp games={games} setGames={setGames}/>}/>
       </Routes>
       <Footer games={games} setGames={setGames}/>
     </div>

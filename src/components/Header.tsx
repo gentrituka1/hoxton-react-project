@@ -27,13 +27,14 @@ export function Header() {
       </div>
       <div className="user">
         <img />
-        
-            <div className="log">
-              <Link className="links" to="/signin"><h1>Login</h1></Link>
-              <h1>Sign Up</h1>
-            </div>
-          
-  
+        <div className="log">
+          <Link className="links" to="/signin">
+            <h1>Login</h1>
+          </Link>
+          <Link className="links" to="/signup">
+            <h1>Sign Up</h1>
+          </Link>
+        </div>
       </div>
     </header>
   );

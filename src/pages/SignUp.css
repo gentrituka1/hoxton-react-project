@@ -1,0 +1,101 @@
+.main-signup-section {
+    display: grid;
+    place-content: center;
+    background: -webkit-linear-gradient(top, #51789e, #b7b8b9);
+  }
+  .signin-container {
+    display: grid;
+    place-content: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: #2a2e32;
+    border: 2px solid #4444f0;
+  }
+  .steam-logo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-self: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .steam-logo span {
+    font-size: 3rem;
+    color: #b3b4b4;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .steam-logo-icon {
+    color: #b3b4b4;
+    font-size: 4rem;
+  }
+  .signin-form {
+    padding: 10px;
+    justify-self: center;
+    border-bottom: 1px solid grey;
+  
+    display: grid;
+    gap: 20px;
+  }
+  .signin-form input {
+    width: 658px;
+    height: 44px;
+    font-size: 1.2rem;
+    background-color: #2a2e32;
+    border: none;
+    border: 1px solid rgb(112, 112, 230);
+  }
+  .signin-form input::placeholder {
+    font-size: 1.2rem;
+  }
+  .signin-form label {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 20px;
+    font-size: 1.4rem;
+    color: #b3b4b4;
+  }
+  .signin-form-buttons {
+    justify-self: end;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 14px;
+  }
+  .signin-form-buttons button {
+    width: 324px;
+    height: 60px;
+    text-align: start;
+    font-size: 1.5rem;
+    background-color: #3b4048;
+    border: none;
+    color: #b3b4b4;
+  }
+  .signin-form-buttons button:hover {
+    background-color: #484d58;
+    cursor: pointer;
+  }
+  .signin-container-footer {
+    padding: 10px 0px;
+    justify-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+  }
+  .signin-container-footer button {
+    width: 476px;
+    height: 52px;
+    font-size: 1.4rem;
+    background-color: #3b4048;
+    border: none;
+    color: #b3b4b4;
+  }
+  .signin-container-footer button:hover {
+    background-color: #484d58;
+    cursor: pointer;
+  }
+  .signin-container-footer span {
+    font-size: 1.4rem;
+    color: #b3b4b4;
+  }

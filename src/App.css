@@ -154,7 +154,8 @@ header {
 }
 
 .main-section-top{
-  padding: 0px 10px;
+  padding: 10px 10px;
+  border-bottom: 4px solid white;
 }
 .main-section-top-news-list{
   list-style: none;

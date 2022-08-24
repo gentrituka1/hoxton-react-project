@@ -7,7 +7,7 @@ export function SignIn({ games, setGames }: Props) {
   return (
     <>
       <LeftSection games={games} setGames={setGames} />
-      <main className="main-signup-section">
+      <main className="main-signin-section">
         <div className="signin-container">
           <div className="steam-logo">
             <SiSteam className="steam-logo-icon" />

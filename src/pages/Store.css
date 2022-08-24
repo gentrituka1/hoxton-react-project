@@ -5,13 +5,18 @@
 .store-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 30px;
 }
 .store-all-game{
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 20px;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 2px solid yellow;
+  border-right: 2px solid yellow;
+  border-left: 2px solid yellow;
+  border-radius: 30px;
+  padding: 10px;
 }
 .store-all-game img{
   width: 100%;
