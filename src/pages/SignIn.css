@@ -40,6 +40,9 @@
     width: 658px;
     height: 44px;
     font-size: 1.2rem;
+    background-color: #2a2e32;
+    border:none;
+    border: 1px solid rgb(112, 112, 230)
 }
 .signin-form input::placeholder{
     font-size: 1.2rem;
@@ -63,6 +66,13 @@
     height: 60px;
     text-align: start;
     font-size: 1.5rem;
+    background-color: #3b4048;
+    border: none;
+    color: #b3b4b4;
+}
+.signin-form-buttons button:hover{
+    background-color: #484d58;
+    cursor: pointer;
 }
 .signin-container-footer{
     padding: 10px 0px;
@@ -77,6 +87,13 @@
     width: 476px;
     height: 52px;
     font-size: 1.4rem;
+    background-color: #3b4048;
+    border: none;
+    color: #b3b4b4;
+}
+.signin-container-footer button:hover{
+    background-color: #484d58;
+    cursor: pointer;
 }
 .signin-container-footer span{
     font-size: 1.4rem;
