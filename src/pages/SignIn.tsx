@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LeftSection, Props } from "../components/LeftSection";
 import { SiSteam } from "react-icons/si";
 import "./SignIn.css";
 
 export function SignIn({ games, setGames }: Props) {
+
+    let navigate = useNavigate()
+
   return (
     <>
       <LeftSection games={games} setGames={setGames} />
@@ -24,7 +27,9 @@ export function SignIn({ games, setGames }: Props) {
             </label>
             <div className="signin-form-buttons">
               <button>Login</button>
-              <button>Cancel</button>
+              <button onClick={() => {
+                navigate("/library")
+              }}>Cancel</button>
             </div>
           </form>
           <div className="signin-container-footer">

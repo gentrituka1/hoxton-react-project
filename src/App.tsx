@@ -25,7 +25,7 @@ export type Game = {
 
 export type User = {
   id: number;
-  nickname: string;
+  username: string;
   avatar: string;
   email: string;
   password: string;

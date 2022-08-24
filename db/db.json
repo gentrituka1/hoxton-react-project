@@ -118,7 +118,7 @@
   "users": [
     {
       "id": 1,
-      "nickname": "gennt-",
+      "username": "gennt-",
       "avatar": "/Public/images/avatar.svg",
       "email": "gentrit@gmail.com",
       "password": "123456",

@@ -43,6 +43,9 @@
   background-color: #2a2e32;
   border: none;
   border: 1px solid rgb(112, 112, 230);
+  caret-color: white;
+  color: white;
+  outline: none;
 }
 .signin-form input::placeholder {
   font-size: 1.2rem;
