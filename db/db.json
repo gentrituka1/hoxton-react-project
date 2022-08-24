@@ -122,7 +122,7 @@
       "avatar": "/Public/images/avatar.svg",
       "email": "gentrit@gmail.com",
       "password": "123456",
-      "loggedIn": true
+      "loggedIn": false
     }
   ]
 }

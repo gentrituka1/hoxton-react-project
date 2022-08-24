@@ -1,9 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
-import { LeftSection, Props } from "../components/LeftSection";
 import { SiSteam } from "react-icons/si";
 import "./SignUp.css";
+import { Game, User } from "../App";
+import { LeftSection } from "../components/LeftSection";
 
-export function SignUp ({ games, setGames }: Props) {
+type Props = {
+    games: Game[];
+    setGames: (games: Game[]) => void;
+    setUsers: (users: User[]) => void;
+    users: User[];
+  };
+
+export function SignUp ({ games, setGames, setUsers, users }: Props) {
 
     let navigate = useNavigate()
 
@@ -16,7 +24,7 @@ export function SignUp ({ games, setGames }: Props) {
                 <SiSteam className="steam-logo-icon" />
                 <span>Steam</span>
               </div>
-              <form className="signup-form" onSubmit={(event) => {
+              <form className="signup-form" name="form" onSubmit={(event) => {
                 event.preventDefault()
                 fetch("http://localhost:4000/users", {
                     method: "POST",
@@ -24,32 +32,33 @@ export function SignUp ({ games, setGames }: Props) {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        username: event.target.username.value,
-                        password: event.target.password.value,
-                        email: event.target.email.value,
+                        id: users.length + 1,
+                        username: document.getElementById("nickname")?.value,
+                        password: document.getElementById("password")?.value,
+                        email: document.getElementById("email")?.value,
                         avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/ffe63e7b-6c8d-4f7c-b991-5caf1da1e61c-profile_image-300x300.jpg",
                         loggedIn: false
                     })
                 }).then((res) => res.json())
                 .then((user) => {
                     localStorage.setItem("user", JSON.stringify(user))
-                    navigate("/library")
+                    setUsers([...users, user])
                 })
               }}>
                 <label>
                   Nickname 
-                  <input name="nickname" type="text" placeholder="Username..." />
+                  <input name="nickname" id="nickname" type="text" placeholder="Username..." required minLength={5}/>
                 </label>
                 <label>
                   Email
-                  <input name="email" type="text" placeholder="Email..." />
+                  <input name="email" id="email" type="text" placeholder="Email..." required/>
                 </label>
                 <label>
                   Password
-                  <input name="password" type="password" placeholder="Password..." />
+                  <input name="password" id="password" type="password" placeholder="Password..." required minLength={6}/>
                 </label>
                 <div className="signup-form-buttons">
-                  <button>SIGNUP</button>
+                  <button type="submit" form="form">SIGNUP</button>
                   <button onClick={() => {
                     navigate("/library")
                   }}>Cancel</button>
