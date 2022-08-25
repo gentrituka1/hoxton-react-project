@@ -1,9 +1,13 @@
 import "./Store.css"
-import { LeftSection, Props } from "../components/LeftSection";
+import { LeftSection } from "../components/LeftSection";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Game } from "../App";
 
-
+type Props = {
+    games: Game[];
+    setGames: (games: Game[]) => void;
+}
 
 export function Store ({games, setGames}: Props) {
     const [toggleBought, setToggleBought] = useState(false);
@@ -15,7 +19,7 @@ export function Store ({games, setGames}: Props) {
         <LeftSection games={games} setGames={setGames}/>
         <main className="main-store-section">
             <div className="store-container">
-                {games.map((game) => (
+                {games.map((game: Game) => (
                     <div className="store-all-game" key={game.id}>
                         <img src={game.logo} alt={game.name} width={200} height={170}/>
                         <div className="store-game-info">

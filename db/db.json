@@ -9,7 +9,7 @@
       "time": "30 minutes ago",
       "price": 8.99,
       "discountedPrice": 5.99,
-      "bought": false,
+      "bought": true,
       "platform": "PC"
     },
     {
@@ -20,7 +20,7 @@
       "favorite": false,
       "time": "1 hour ago",
       "price": "Free",
-      "bought": false,
+      "bought": true,
       "platform": "PC"
     },
     {
