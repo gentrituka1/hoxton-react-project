@@ -24,7 +24,7 @@ export function SignUp ({ games, setGames, setUsers, users }: Props) {
                 <SiSteam className="steam-logo-icon" />
                 <span>Steam</span>
               </div>
-              <form className="signup-form" name="form" onSubmit={(event) => {
+              <form className="signup-form" id="form" onSubmit={(event) => {
                 event.preventDefault()
                 fetch("http://localhost:4000/users", {
                     method: "POST",
@@ -44,6 +44,7 @@ export function SignUp ({ games, setGames, setUsers, users }: Props) {
                     localStorage.setItem("user", JSON.stringify(user))
                     setUsers([...users, user])
                 })
+                navigate("/library")
               }}>
                 <label>
                   Nickname 

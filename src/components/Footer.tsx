@@ -43,7 +43,6 @@ export function Footer({ games, setGames }: Props) {
           <input
             type="text"
             name="name"
-            id="downloads-checkbox"
             placeholder="Name..."
             required
             minLength={3}
@@ -51,7 +50,6 @@ export function Footer({ games, setGames }: Props) {
           <input
             type="url"
             name="image"
-            id="downloads-checkbox"
             placeholder="Image..."
             required
             minLength={5}

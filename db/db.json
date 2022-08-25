@@ -123,6 +123,14 @@
       "email": "gentrit@gmail.com",
       "password": "123456",
       "loggedIn": false
+    },
+    {
+      "id": 2,
+      "username": "gennt-",
+      "password": "123456",
+      "email": "gentrit@gmail.com",
+      "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/ffe63e7b-6c8d-4f7c-b991-5caf1da1e61c-profile_image-300x300.jpg",
+      "loggedIn": false
     }
   ]
 }
