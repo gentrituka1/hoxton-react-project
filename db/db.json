@@ -17,7 +17,7 @@
       "name": "Counter Strike: Global Offensive",
       "description": "Happy Birthday CS:GO",
       "logo": "/Public/images/csgo.svg",
-      "favorite": false,
+      "favorite": true,
       "time": "1 hour ago",
       "price": "Free",
       "bought": true,

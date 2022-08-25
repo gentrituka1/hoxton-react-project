@@ -1,5 +1,5 @@
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { User } from "../App";
 
 export function Header() {
@@ -18,22 +18,22 @@ export function Header() {
             history.forward();
           }}
         />
-        <Link className="links" to="/store">
+        <NavLink className="links" to="/store">
           <h1>Store</h1>
-        </Link>
-        <Link className="links" to="/library">
+        </NavLink>
+        <NavLink className="links" to="/library">
           <h1>Library</h1>
-        </Link>
+        </NavLink>
       </div>
       <div className="user">
         <img />
         <div className="log">
-          <Link className="links" to="/signin">
+          <NavLink className="links" to="/signin">
             <h1>Login</h1>
-          </Link>
-          <Link className="links" to="/signup">
+          </NavLink>
+          <NavLink className="links" to="/signup">
             <h1>Sign Up</h1>
-          </Link>
+          </NavLink>
         </div>
       </div>
     </header>

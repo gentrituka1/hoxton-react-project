@@ -7,9 +7,19 @@ type Props = {
     setGames: (games: Game[]) => void;
   };
 
+
 export function Main ({ games, setGames }: Props) {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
+    function deleteGame (game: Game){
+        fetch(`http://localhost:4000/games/${game.id}`, {
+            method: "DELETE"
+        })
+
+        let gamesCopy = structuredClone(games)
+        let updatedGames = gamesCopy.filter((g: Game) => g.id !== game.id)
+        setGames(updatedGames)
+    }
 
     useEffect(() => {
       if(games.length === 0) return
@@ -84,13 +94,15 @@ export function Main ({ games, setGames }: Props) {
                     <img src={game.logo} width={200}/>
                     <MdDelete className="delete-item" onClick={() => {
                         if(window.confirm("Are you sure you want to delete this game?")) {
-                        fetch(`http://localhost:4000/games/${game.id}`, {
-                            method: "DELETE",
-                        }).then(r => r.json())
-                        .then(data => {
-                            setGames(data);
-                        })
-                        location.reload()
+                        // fetch(`http://localhost:4000/games/${game.id}`, {
+                        //     method: "DELETE",
+                        // }).then(r => r.json())
+                        // .then(data => {
+                        //   const gamesCopy = structuredClone(data);
+                        //   const updatedGames = gamesCopy.filter((g: Game )=> g.id !== game.id)
+                        //     setGames(updatedGames);
+                        // })
+                        deleteGame(game)
                       } else return
                     }}/>
                 </div>

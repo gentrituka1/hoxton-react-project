@@ -43,6 +43,10 @@ header {
   cursor: pointer;
   text-shadow: #c9cbd3 0px 0px 15px;
 }
+.header-left .active{
+  text-shadow: #c9cbd3 0px 0px 15px;
+  color: white;
+}
 .user {
   display: grid;
   justify-content: end;
@@ -53,6 +57,10 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 40px;
+}
+.log .active{
+  color: white;
+  text-shadow: #c9cbd3 0px 0px 15px;
 }
 
 /* left section */
