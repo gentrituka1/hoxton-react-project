@@ -90,9 +90,9 @@ function App() {
         <Route path="/library" element={<Library games={games} setGames={setGames}/>} />
         <Route path="/store" element={<Store games={games} setGames={setGames}/>}/>
         <Route path="/signin" element={<SignIn games={games} signIn={signIn} setGames={setGames}/>}/>
-        <Route path="/signup" element={<SignUp games={games} setGames={setGames} users={users} setUsers={setUsers}/>}/>
+        <Route path="/signup" element={<SignUp games={games} setGames={setGames} signIn={signIn} users={users} setUsers={setUsers}/>}/>
       </Routes>
-      <Footer games={games} setGames={setGames}/>
+      <Footer setGames={setGames}/>
     </div>
   );
 }

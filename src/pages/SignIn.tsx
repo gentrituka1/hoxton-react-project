@@ -9,40 +9,40 @@ export function SignIn({signIn, games, setGames }: Props) {
 
     let navigate = useNavigate()
 
-
-    function handleSubmit (event: any) {
-      event.preventDefault()
-      let username = event.target.username.value 
-      let password = event.target.password.value
-  
-      fetch(`http://localhost:4000/users/${username}`)
-      .then(r => r.json())
-      .then((user: User) => {
-       if (user.password === password)  {
-        signIn(user)
-       } else {
-         alert("Your password/username is incorrect. Please try again.")
-       }
-      })
-  
-    }
   return (
     <>
-      <LeftSection games={games} setGames={setGames} />
+      <LeftSection games={games} setGames={setGames} signIn={signIn} />
       <main className="main-signin-section">
         <div className="signin-container">
           <div className="steam-logo">
             <SiSteam className="steam-logo-icon" />
             <span>Steam</span>
           </div>
-          <form className="signin-form" onSubmit={handleSubmit}>
+          <form className="signin-form" id="signin-form" onSubmit={(event) => {
+            event.preventDefault()
+            let username = event.target.username.value 
+            let password = event.target.password.value
+        
+            fetch(`http://localhost:4000/users/`)
+            .then(r => r.json())
+            .then(usersFromServer => {
+              let user = usersFromServer.find((user: User)=> user.username === username && user.password === password)
+              if (user) {
+                signIn(user)
+                navigate("/library")
+              } else {
+                alert("Your password/username is incorrect. Please try again.")
+              }
+              }) 
+            document.getElementById("signin-form")?.reset()
+          }}>
             <label>
               Username
-              <input type="text" placeholder="Username or Email..." />
+              <input name="username" type="text" placeholder="Username or Email..." />
             </label>
             <label>
               Password
-              <input type="password" placeholder="Password..." />
+              <input name="password" type="password" placeholder="Password..." />
             </label>
             <div className="signin-form-buttons">
               <button>Login</button>

@@ -9,15 +9,16 @@ type Props = {
     setGames: (games: Game[]) => void;
     setUsers: (users: User[]) => void;
     users: User[];
+    signIn: (user: User) => void;
   };
 
-export function SignUp ({ games, setGames, setUsers, users }: Props) {
+export function SignUp ({ signIn, games, setGames, setUsers, users }: Props) {
 
     let navigate = useNavigate()
 
     return (
         <>
-          <LeftSection games={games} setGames={setGames} />
+          <LeftSection games={games} signIn={signIn} setGames={setGames} />
           <main className="main-signup-section">
             <div className="signup-container">
               <div className="steam-logo">

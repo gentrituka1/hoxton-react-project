@@ -1,8 +1,12 @@
 import { BiMessageRoundedAdd } from "react-icons/bi";
 import { RiAddBoxLine } from "react-icons/ri";
-import { Props } from "./LeftSection";
+import { Game } from "../App";
 
-export function Footer({ games, setGames }: Props) {
+type Props = {
+  setGames: (games: Game[]) => void;
+}
+
+export function Footer({ setGames }: Props) {
   return (
     <footer>
       <div className="footer-left dropup">
@@ -12,6 +16,7 @@ export function Footer({ games, setGames }: Props) {
         </div>
         <form
           className="dropup-content form"
+          id="myDropdown"
           onSubmit={(event) => {
             event.preventDefault();
             fetch("http://localhost:4000/games", {
@@ -35,8 +40,6 @@ export function Footer({ games, setGames }: Props) {
                 setGames(gamesFromServer);
               });
               //@ts-ignore
-            event.target.reset();
-            
             location.reload();
           }}
         >
