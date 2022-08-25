@@ -94,7 +94,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header signedIn={signedIn} signOut={signOut}/>
+      <Header signedIn={signedIn} user={user} signOut={signOut}/>
       <Routes>
         <Route index element={<Navigate to="/library"/>} />
         <Route path="/library" element={<Library games={games} setGames={setGames}/>} />

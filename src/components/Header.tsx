@@ -5,9 +5,10 @@ import { User } from "../App";
 type Props = {
   signedIn: boolean;
   signOut: () => void;
+  user: User | null;
 }
 
-export function Header({signedIn, signOut}: Props) {
+export function Header({signedIn, signOut, user}: Props) {
   return (
     <header>
       <div className="header-left">
@@ -33,16 +34,7 @@ export function Header({signedIn, signOut}: Props) {
       <div className="user">
         <img />
         
-          { signedIn ? 
-          <div className="log">
-            <NavLink className="links" to="/signin">
-              <h1>Sign In</h1>
-            </NavLink>
-            <NavLink className="links" to="/signup">
-              <h1>Sign Up</h1>
-            </NavLink>
-          </div> 
-          : 
+          { signedIn && user !== null ? 
           <div className="log">
             <NavLink className="links" to="/">
               <h1>Profile</h1>
@@ -52,7 +44,17 @@ export function Header({signedIn, signOut}: Props) {
             }}>
               <h1>Sign Out</h1>
             </div>
-          </div>}
+          </div>
+          :
+          <div className="log">
+            <NavLink className="links" to="/signin">
+              <h1>Sign In</h1>
+            </NavLink>
+            <NavLink className="links" to="/signup">
+              <h1>Sign Up</h1>
+            </NavLink>
+          </div>
+}
  
       </div>
     </header>
