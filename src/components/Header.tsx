@@ -37,7 +37,7 @@ export function Header({signedIn, signOut, user}: Props) {
           { signedIn && user !== null ? 
           <div className="log">
             <NavLink className="links" to="/">
-              <h1>Profile</h1>
+              <h1>{user.username}</h1>
             </NavLink>
             <div className="links" onClick={() => {
               signOut();

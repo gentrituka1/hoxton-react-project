@@ -23,11 +23,12 @@ export function SignIn({signIn, games, signedIn, setSignedIn, setGames }: Props)
             event.preventDefault()
             let username = event.target.username.value 
             let password = event.target.password.value
+            let email = event.target.username.value
         
             fetch(`http://localhost:4000/users/`)
             .then(r => r.json())
             .then(usersFromServer => {
-              let user = usersFromServer.find((user: User)=> user.username === username && user.password === password)
+              let user = usersFromServer.find((user: User)=> (user.username === username || user.email === email) && user.password === password)
               if (user) {
                 signIn(user)
                 setSignedIn(true)
