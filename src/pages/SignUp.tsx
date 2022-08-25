@@ -41,7 +41,7 @@ export function SignUp ({ games, setGames, setUsers, users }: Props) {
                     })
                 }).then((res) => res.json())
                 .then((user) => {
-                    localStorage.setItem("user", JSON.stringify(user))
+                    localStorage.setItem("userId", JSON.stringify(user.id)) 
                     setUsers([...users, user])
                 })
                 navigate("/library")

@@ -34,7 +34,7 @@ export function Footer({ games, setGames }: Props) {
               .then((gamesFromServer) => {
                 setGames(gamesFromServer);
               });
-
+              //@ts-ignore
             event.target.reset();
             
             location.reload();
