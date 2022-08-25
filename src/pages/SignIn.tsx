@@ -1,12 +1,31 @@
 import { Link, useNavigate } from "react-router-dom";
-import { LeftSection, Props } from "../components/LeftSection";
+import { Props } from "../App";
+import { LeftSection } from "../components/LeftSection";
 import { SiSteam } from "react-icons/si";
 import "./SignIn.css";
+import { User } from "../App";
 
-export function SignIn({ games, setGames }: Props) {
+export function SignIn({signIn, games, setGames }: Props) {
 
     let navigate = useNavigate()
 
+
+    function handleSubmit (event: any) {
+      event.preventDefault()
+      let username = event.target.username.value 
+      let password = event.target.password.value
+  
+      fetch(`http://localhost:4000/users/${username}`)
+      .then(r => r.json())
+      .then((user: User) => {
+       if (user.password === password)  {
+        signIn(user)
+       } else {
+         alert("Your password/username is incorrect. Please try again.")
+       }
+      })
+  
+    }
   return (
     <>
       <LeftSection games={games} setGames={setGames} />
@@ -16,7 +35,7 @@ export function SignIn({ games, setGames }: Props) {
             <SiSteam className="steam-logo-icon" />
             <span>Steam</span>
           </div>
-          <form className="signin-form">
+          <form className="signin-form" onSubmit={handleSubmit}>
             <label>
               Username
               <input type="text" placeholder="Username or Email..." />

@@ -5,11 +5,11 @@
       "name": "Counter Strike",
       "description": "Bug fixes and improvements to the game",
       "logo": "/Public/images/counter-strike.svg",
-      "favorite": true,
+      "favorite": false,
       "time": "30 minutes ago",
       "price": 8.99,
       "discountedPrice": 5.99,
-      "bought": true,
+      "bought": false,
       "platform": "PC"
     },
     {
@@ -17,10 +17,10 @@
       "name": "Counter Strike: Global Offensive",
       "description": "Happy Birthday CS:GO",
       "logo": "/Public/images/csgo.svg",
-      "favorite": true,
+      "favorite": false,
       "time": "1 hour ago",
       "price": "Free",
-      "bought": true,
+      "bought": false,
       "platform": "PC"
     },
     {
@@ -125,12 +125,19 @@
       "loggedIn": false
     },
     {
-      "id": 2,
-      "username": "gennt-",
+      "username": "bruna",
       "password": "123456",
-      "email": "gentrit@gmail.com",
+      "email": "bruna@gmail.com",
       "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/ffe63e7b-6c8d-4f7c-b991-5caf1da1e61c-profile_image-300x300.jpg",
-      "loggedIn": false
+      "loggedIn": false,
+      "id": 2
+    }
+  ],
+  "users_games": [
+    {
+      "userId": 3,
+      "gameId": 1,
+      "id": 1
     }
   ]
 }

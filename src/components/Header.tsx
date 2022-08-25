@@ -29,7 +29,7 @@ export function Header() {
         <img />
         <div className="log">
           <NavLink className="links" to="/signin">
-            <h1>Login</h1>
+            <h1>Sign In</h1>
           </NavLink>
           <NavLink className="links" to="/signup">
             <h1>Sign Up</h1>

@@ -32,7 +32,6 @@ export function SignUp ({ games, setGames, setUsers, users }: Props) {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        id: users.length + 1,
                         username: document.getElementById("nickname")?.value,
                         password: document.getElementById("password")?.value,
                         email: document.getElementById("email")?.value,

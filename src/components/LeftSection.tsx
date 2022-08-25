@@ -1,13 +1,8 @@
-import { DOMElement, useEffect, useState } from "react";
+import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiListSettingsFill } from "react-icons/ri";
-import { Game } from "../App";
+import { Props } from "../App";
 import 'react-alice-carousel/lib/alice-carousel.css'
-
-export type Props = {
-  games: Game[];
-  setGames: (games: Game[]) => void;
-};
 
 export function LeftSection({ games, setGames }: Props) {
   const [value, setValue] = useState("");
