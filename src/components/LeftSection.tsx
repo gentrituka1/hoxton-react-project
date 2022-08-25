@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiListSettingsFill } from "react-icons/ri";
-import { Props } from "../App";
+import { Game } from "../App";
 import 'react-alice-carousel/lib/alice-carousel.css'
+
+type Props = {
+  games: Game[];
+  setGames: (games: Game[]) => void;
+}
 
 export function LeftSection({ games, setGames }: Props) {
   const [value, setValue] = useState("");

@@ -36,18 +36,28 @@ export type Props = {
   games: Game[];
   setGames: (games: Game[]) => void;
   signIn: (user: User) => void;
+  signedIn: boolean;
+  setSignedIn: (signedIn: boolean) => void;
 };
+
+
 
 function App() {
   const [games, setGames] = useState<Game[]>([]);
   const [users, setUsers] = useState<User[]>([]);
   const [user, setUser] = useState< User | null>(null);
+  const [signedIn, setSignedIn] = useState(false);
 
   const navigate = useNavigate();
 
   function signIn(user: User) {
     localStorage.id = user.id;
     setUser(user);
+  }
+
+  function signOut(){
+    localStorage.removeItem("id");
+    setUser(null);
   }
 
  
@@ -58,7 +68,7 @@ function App() {
         .then((r) => r.json())
         .then((userFromServer) => {
           setUser(userFromServer);
-          navigate("/employers");
+          navigate("/library");
         });
     } else {
       navigate("/signIn");
@@ -84,12 +94,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header signedIn={signedIn} signOut={signOut}/>
       <Routes>
         <Route index element={<Navigate to="/library"/>} />
         <Route path="/library" element={<Library games={games} setGames={setGames}/>} />
         <Route path="/store" element={<Store games={games} setGames={setGames}/>}/>
-        <Route path="/signin" element={<SignIn games={games} signIn={signIn} setGames={setGames}/>}/>
+        <Route path="/signin" element={<SignIn games={games} signIn={signIn} setGames={setGames} signedIn={signedIn} setSignedIn={setSignedIn}/>}/>
         <Route path="/signup" element={<SignUp games={games} setGames={setGames} signIn={signIn} users={users} setUsers={setUsers}/>}/>
       </Routes>
       <Footer setGames={setGames}/>

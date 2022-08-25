@@ -5,13 +5,14 @@ import { SiSteam } from "react-icons/si";
 import "./SignIn.css";
 import { User } from "../App";
 
-export function SignIn({signIn, games, setGames }: Props) {
+export function SignIn({signIn, games, signedIn, setSignedIn, setGames }: Props) {
+  
 
     let navigate = useNavigate()
 
   return (
     <>
-      <LeftSection games={games} setGames={setGames} signIn={signIn} />
+      <LeftSection games={games} setGames={setGames} />
       <main className="main-signin-section">
         <div className="signin-container">
           <div className="steam-logo">
@@ -29,6 +30,7 @@ export function SignIn({signIn, games, setGames }: Props) {
               let user = usersFromServer.find((user: User)=> user.username === username && user.password === password)
               if (user) {
                 signIn(user)
+                setSignedIn(true)
                 navigate("/library")
               } else {
                 alert("Your password/username is incorrect. Please try again.")
