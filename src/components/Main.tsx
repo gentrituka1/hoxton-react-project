@@ -1,48 +1,46 @@
 import { useState, useEffect } from "react";
 import { Game } from "../App";
-import {MdDelete} from "react-icons/md";
+import { MdDelete } from "react-icons/md";
 
 type Props = {
-    games: Game[];
-    setGames: (games: Game[]) => void;
-  };
+  games: Game[];
+  setGames: (games: Game[]) => void;
+};
 
+export function Main({ games, setGames }: Props) {
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-export function Main ({ games, setGames }: Props) {
-    const [selectedIndex, setSelectedIndex] = useState(0);
+  function deleteGame(game: Game) {
+    fetch(`http://localhost:4000/games/${game.id}`, {
+      method: "DELETE",
+    });
 
-    function deleteGame (game: Game){
-        fetch(`http://localhost:4000/games/${game.id}`, {
-            method: "DELETE"
-        })
+    let gamesCopy = structuredClone(games);
+    let updatedGames = gamesCopy.filter((g: Game) => g.id !== game.id);
+    setGames(updatedGames);
+  }
 
-        let gamesCopy = structuredClone(games)
-        let updatedGames = gamesCopy.filter((g: Game) => g.id !== game.id)
-        setGames(updatedGames)
+  useEffect(() => {
+    if (games.length === 0) return;
+    const game = games[selectedIndex];
+    const gameEl = document.querySelector(`#game-${game.id}`);
+    if (gameEl) {
+      gameEl.scrollIntoView({ block: "center", inline: "center" });
     }
+  }, [games, selectedIndex]);
 
-    useEffect(() => {
-      if(games.length === 0) return
-      const game = games[selectedIndex];
-      const gameEl = document.querySelector(`#game-${game.id}`);
-      if (gameEl) {
-        gameEl.scrollIntoView({ block: "center",  inline: "center" });
-      }
-    }, [games, selectedIndex]);
-  
-    function previous() {
-      let newIndex = selectedIndex === 0 ? games.length - 1 : selectedIndex - 1;
-      setSelectedIndex(newIndex);
-    }
-  
-    function next() {
-      let newIndex = selectedIndex === games.length - 1 ? 0 : selectedIndex + 1;
-      setSelectedIndex(newIndex);
-    }
+  function previous() {
+    let newIndex = selectedIndex === 0 ? games.length - 1 : selectedIndex - 1;
+    setSelectedIndex(newIndex);
+  }
 
+  function next() {
+    let newIndex = selectedIndex === games.length - 1 ? 0 : selectedIndex + 1;
+    setSelectedIndex(newIndex);
+  }
 
-    return (
-        <main className="main-section">
+  return (
+    <main className="main-section">
       <div className="main-section-top">
         <div className="whats-new">
           <h2>WHAT'S NEW</h2>
@@ -78,7 +76,7 @@ export function Main ({ games, setGames }: Props) {
               id={`game-${game.id}`}
             >
               <h4>{game.time}</h4>
-              <img src={game.logo} width={200} height={100}/>
+              <img src={game.logo} width={200} height={100} />
               <p>{game.description}</p>
               <h3>{game.name}</h3>
             </div>
@@ -88,28 +86,35 @@ export function Main ({ games, setGames }: Props) {
       <div className="main-section-bottom">
         <div className="main-section-bottom-all-games">
           <h2>ALL GAMES({games.length})</h2>
-            <div className="main-section-bottom-all-games-list">
-              {games.map((game) => 
-                <div className="main-section-bottom-all-games-item">
-                    <img src={game.logo} width={200}/>
-                    <MdDelete className="delete-item" onClick={() => {
-                        if(window.confirm("Are you sure you want to delete this game?")) {
-                        // fetch(`http://localhost:4000/games/${game.id}`, {
-                        //     method: "DELETE",
-                        // }).then(r => r.json())
-                        // .then(data => {
-                        //   const gamesCopy = structuredClone(data);
-                        //   const updatedGames = gamesCopy.filter((g: Game )=> g.id !== game.id)
-                        //     setGames(updatedGames);
-                        // })
-                        deleteGame(game)
-                      } else return
-                    }}/>
-                </div>
-              )}
-            </div>
+          <div className="main-section-bottom-all-games-list">
+            {games.map((game) => (
+              <div className="main-section-bottom-all-games-item">
+                <img src={game.logo} width={200} />
+                <MdDelete
+                  className="delete-item"
+                  onClick={() => {
+                    if (
+                      window.confirm(
+                        "Are you sure you want to delete this game?"
+                      )
+                    ) {
+                      // fetch(`http://localhost:4000/games/${game.id}`, {
+                      //     method: "DELETE",
+                      // }).then(r => r.json())
+                      // .then(data => {
+                      //   const gamesCopy = structuredClone(data);
+                      //   const updatedGames = gamesCopy.filter((g: Game )=> g.id !== game.id)
+                      //     setGames(updatedGames);
+                      // })
+                      deleteGame(game);
+                    } else return;
+                  }}
+                />
+              </div>
+            ))}
           </div>
+        </div>
       </div>
     </main>
-    )
+  );
 }

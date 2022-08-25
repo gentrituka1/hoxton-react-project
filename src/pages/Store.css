@@ -1,14 +1,14 @@
 /* main section of store page */
-.main-store-section{
+.main-store-section {
   background-color: #184150;
 }
-.store-container{
+.store-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
   padding: 30px;
 }
-.store-all-game{
+.store-all-game {
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 20px;
@@ -18,49 +18,49 @@
   border-radius: 30px;
   padding: 10px;
 }
-.store-all-game img{
+.store-all-game img {
   width: 100%;
-  background-color:bisque;
+  background-color: bisque;
 }
-.store-game-info{
+.store-game-info {
   display: grid;
   align-items: end;
   padding: 10px;
   color: white;
 }
 
-.store-game-info-price{
+.store-game-info-price {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
 }
-.price-tag{
+.price-tag {
   color: #c5f009;
   font-size: 1.5rem;
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
-.store-game-info-price-old{
+.store-game-info-price-old {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px;
 }
-.discounted-price{
-  font-family: Georgia, Times, 'Times New Roman', serif;
-  text-decoration:double line-through;
+.discounted-price {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  text-decoration: double line-through;
   font-size: 1.4rem;
   color: orangered;
 }
-.buy-game{
+.buy-game {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
 }
-.buy-game h2{
-  font-family:'Courier New', Courier, monospace;
+.buy-game h2 {
+  font-family: "Courier New", Courier, monospace;
   color: yellow;
 }
-.buy-game button{
+.buy-game button {
   width: 100px;
   height: 50px;
   background-color: #1bb251;
@@ -69,7 +69,7 @@
   border-radius: 30px;
   transition: all 0.6s ease-in-out;
 }
-.buy-game button:hover{
+.buy-game button:hover {
   transform: scale(1.1);
   border-radius: 0px;
   cursor: pointer;

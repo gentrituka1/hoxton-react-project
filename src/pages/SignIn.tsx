@@ -5,10 +5,14 @@ import { SiSteam } from "react-icons/si";
 import "./SignIn.css";
 import { User } from "../App";
 
-export function SignIn({signIn, games, signedIn, setSignedIn, setGames }: Props) {
-  
-
-    let navigate = useNavigate()
+export function SignIn({
+  signIn,
+  games,
+  signedIn,
+  setSignedIn,
+  setGames,
+}: Props) {
+  let navigate = useNavigate();
 
   return (
     <>
@@ -19,39 +23,61 @@ export function SignIn({signIn, games, signedIn, setSignedIn, setGames }: Props)
             <SiSteam className="steam-logo-icon" />
             <span>Steam</span>
           </div>
-          <form className="signin-form" id="signin-form" onSubmit={(event) => {
-            event.preventDefault()
-            let username = event.target.username.value 
-            let password = event.target.password.value
-            let email = event.target.username.value
-        
-            fetch(`http://localhost:4000/users/`)
-            .then(r => r.json())
-            .then(usersFromServer => {
-              let user = usersFromServer.find((user: User)=> (user.username === username || user.email === email) && user.password === password)
-              if (user) {
-                signIn(user)
-                setSignedIn(true)
-                navigate("/library")
-              } else {
-                alert("Your password/username is incorrect. Please try again.")
-              }
-              }) 
-            document.getElementById("signin-form")?.reset()
-          }}>
+          <form
+            className="signin-form"
+            id="signin-form"
+            onSubmit={(event) => {
+              event.preventDefault();
+              let username = event.target.username.value;
+              let password = event.target.password.value;
+              let email = event.target.username.value;
+
+              fetch(`http://localhost:4000/users/`)
+                .then((r) => r.json())
+                .then((usersFromServer) => {
+                  let user = usersFromServer.find(
+                    (user: User) =>
+                      (user.username === username || user.email === email) &&
+                      user.password === password
+                  );
+                  if (user) {
+                    signIn(user);
+                    setSignedIn(true);
+                    navigate("/library");
+                  } else {
+                    alert(
+                      "Your password/username is incorrect. Please try again."
+                    );
+                  }
+                });
+              document.getElementById("signin-form")?.reset();
+            }}
+          >
             <label>
               Username
-              <input name="username" type="text" placeholder="Username or Email..." />
+              <input
+                name="username"
+                type="text"
+                placeholder="Username or Email..."
+              />
             </label>
             <label>
               Password
-              <input name="password" type="password" placeholder="Password..." />
+              <input
+                name="password"
+                type="password"
+                placeholder="Password..."
+              />
             </label>
             <div className="signin-form-buttons">
               <button>Login</button>
-              <button onClick={() => {
-                navigate("/library")
-              }}>Cancel</button>
+              <button
+                onClick={() => {
+                  navigate("/library");
+                }}
+              >
+                Cancel
+              </button>
             </div>
           </form>
           <div className="signin-container-footer">

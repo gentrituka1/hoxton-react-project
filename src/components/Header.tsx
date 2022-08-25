@@ -6,9 +6,9 @@ type Props = {
   signedIn: boolean;
   signOut: () => void;
   user: User | null;
-}
+};
 
-export function Header({signedIn, signOut, user}: Props) {
+export function Header({ signedIn, signOut, user }: Props) {
   return (
     <header>
       <div className="header-left">
@@ -33,19 +33,22 @@ export function Header({signedIn, signOut, user}: Props) {
       </div>
       <div className="user">
         <img />
-        
-          { signedIn && user !== null ? 
+
+        {signedIn && user !== null ? (
           <div className="log">
             <NavLink className="links" to="/">
               <h1>{user.username}</h1>
             </NavLink>
-            <div className="links" onClick={() => {
-              signOut();
-            }}>
+            <div
+              className="links"
+              onClick={() => {
+                signOut();
+              }}
+            >
               <h1>Sign Out</h1>
             </div>
           </div>
-          :
+        ) : (
           <div className="log">
             <NavLink className="links" to="/signin">
               <h1>Sign In</h1>
@@ -54,8 +57,7 @@ export function Header({signedIn, signOut, user}: Props) {
               <h1>Sign Up</h1>
             </NavLink>
           </div>
-}
- 
+        )}
       </div>
     </header>
   );

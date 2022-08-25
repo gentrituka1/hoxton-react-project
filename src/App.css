@@ -5,7 +5,7 @@
     "header         header" 70px
     "left-section   main-section" 1fr
     "footer         footer" 50px /
-    300px           auto;
+    300px auto;
 }
 
 /* header section */
@@ -26,11 +26,11 @@ header {
   gap: 30px;
   color: #c9cbd3;
 }
-.user h1{
+.user h1 {
   font-size: 1.8rem;
   color: #c9cbd3;
 }
-.header-left h1{
+.header-left h1 {
   font-size: 1.8rem;
 }
 .header-font {
@@ -43,7 +43,7 @@ header {
   cursor: pointer;
   text-shadow: #c9cbd3 0px 0px 15px;
 }
-.header-left .active{
+.header-left .active {
   text-shadow: #c9cbd3 0px 0px 15px;
   color: white;
 }
@@ -53,12 +53,12 @@ header {
   color: white;
   padding-right: 10px;
 }
-.log{
+.log {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 40px;
 }
-.log .active{
+.log .active {
   color: white;
   text-shadow: #c9cbd3 0px 0px 15px;
 }
@@ -69,7 +69,7 @@ header {
   grid-area: left-section;
   background-color: #24292f;
 }
-.left-section-top{
+.left-section-top {
   display: grid;
   grid-auto-flow: column;
   place-items: center;
@@ -77,42 +77,42 @@ header {
   border-radius: 5px;
   margin: 5px;
 }
-.left-section-top-top{
+.left-section-top-top {
   display: grid;
   grid-auto-flow: column;
   place-items: center;
   padding: 5px;
 }
-.left-section-top input{
+.left-section-top input {
   all: unset;
   padding-left: 5px;
   color: white;
 }
-.left-section-top input::placeholder{
+.left-section-top input::placeholder {
   font-size: 1.2rem;
 }
-.left-section-font{
+.left-section-font {
   color: #7e7f81;
   font-size: 2rem;
 }
-.left-section-bottom-menu h2{
+.left-section-bottom-menu h2 {
   color: white;
   padding: 5px;
   transform: translateY(-5px);
   -webkit-user-select: none;
-  background: -webkit-linear-gradient(left, #2f3644, #252931)
+  background: -webkit-linear-gradient(left, #2f3644, #252931);
 }
-.left-section-bottom-menu h2:hover{
+.left-section-bottom-menu h2:hover {
   background-color: #3f4c6a;
   cursor: pointer;
 }
-#list1{
+#list1 {
   -webkit-user-select: none;
 }
-#list2{
+#list2 {
   -webkit-user-select: none;
 }
-.left-section-bottom-menu li{
+.left-section-bottom-menu li {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -123,11 +123,11 @@ header {
   font-weight: bold;
 }
 
-.left-section-bottom-menu li:hover{
+.left-section-bottom-menu li:hover {
   background-color: #3f4c6a7e;
   cursor: pointer;
 }
-#list1 li p{
+#list1 li p {
   color: orange;
 }
 
@@ -137,108 +137,109 @@ header {
   grid-area: main-section;
   background-color: #1f2b37;
 }
-.whats-new{
+.whats-new {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
 }
-.whats-new h2{
+.whats-new h2 {
   color: rgb(172, 169, 169);
   font-size: 1.5rem;
-  font-family:'Arial Narrow', Arial, sans-serif;
+  font-family: "Arial Narrow", Arial, sans-serif;
 }
-.whats-new-arrows{
+.whats-new-arrows {
   display: grid;
   grid-template-columns: auto 1fr;
   color: #7e7f81;
 }
-.whats-new-arrows h1{
+.whats-new-arrows h1 {
   -webkit-user-select: none;
 }
-.whats-new-arrows h1:hover{
+.whats-new-arrows h1:hover {
   color: white;
   cursor: pointer;
 }
 
-.main-section-top{
+.main-section-top {
   padding: 10px 10px;
   border-bottom: 4px solid white;
 }
-.main-section-top-news-list{
+.main-section-top-news-list {
   list-style: none;
 }
 
-.scroller{
-    max-width: 1550px;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 1rem;
-  
-    overflow-x: scroll;
-    overflow: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior:  smooth;
-    padding: 1rem 1rem;
+.scroller {
+  max-width: 1550px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+
+  overflow-x: scroll;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1rem 1rem;
 }
 .scroll-item {
   scroll-snap-align: center;
   cursor: pointer;
   padding: 10px;
 }
-.scroll-item h4{
+.scroll-item h4 {
   font-size: 0.9rem;
   font-family: sans-serif;
   color: #b0b2b8;
 }
-.scroll-item p{
+.scroll-item p {
   color: #888e9a;
   font-size: 1.1rem;
   font-weight: bold;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.scroll-item h3{
+.scroll-item h3 {
   color: white;
 }
 .scroll-item.selected {
   box-shadow: 0 0 0 4px grey;
 }
-.main-section-bottom-all-games{
+.main-section-bottom-all-games {
   padding: 10px;
 }
 .main-section-bottom-all-games h2 {
   color: rgb(172, 169, 169);
   font-size: 1.5rem;
-  font-family:'Arial Narrow', Arial, sans-serif;
+  font-family: "Arial Narrow", Arial, sans-serif;
 }
-.main-section-bottom-all-games-list{
+.main-section-bottom-all-games-list {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 50px;
 }
-.main-section-bottom-all-games-item{
+.main-section-bottom-all-games-item {
   transition: all 0.5s ease-in-out;
   padding-left: 20px;
 }
-.main-section-bottom-all-games-item:hover{
+.main-section-bottom-all-games-item:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-.main-section-bottom-all-games-item img:hover{
+.main-section-bottom-all-games-item img:hover {
   box-shadow: white 0px 0px 15px;
 }
-.main-section-bottom-all-games-item{
+.main-section-bottom-all-games-item {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 5px;
 }
-.delete-item{
+.delete-item {
   font-size: 1.4rem;
   color: grey;
   transition: all 0.5 ease-in-out;
 }
-.delete-item:hover{
+.delete-item:hover {
   transform: scale(1.5);
 }
 
@@ -281,14 +282,14 @@ footer {
 .footer-right-friends {
   display: grid;
 }
-.add-game{
+.add-game {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   gap: 5px;
 }
 
-.links{
+.links {
   text-decoration: none;
   color: #c9cbd3;
 }
@@ -303,7 +304,7 @@ footer {
   bottom: 50px;
   background-color: lightgray;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 .dropup-content input {
@@ -313,18 +314,18 @@ footer {
   outline: none;
   font-size: 1rem;
 }
-.dropup-content button{
+.dropup-content button {
   color: black;
   padding: 12px 16px;
   display: block;
 }
 .dropup-content input:hover,
-.dropup-content button:hover{
-  background-color: #ddd
+.dropup-content button:hover {
+  background-color: #ddd;
 }
-.dropup:hover .dropup-content{
+.dropup:hover .dropup-content {
   display: block;
 }
-.dropup:hover .dropbtn{
-  background-color: #2980B9;
+.dropup:hover .dropbtn {
+  background-color: #2980b9;
 }

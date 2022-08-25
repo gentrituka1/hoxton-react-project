@@ -30,7 +30,7 @@ export type User = {
   email: string;
   password: string;
   loggedIn: boolean;
-}
+};
 
 export type Props = {
   games: Game[];
@@ -40,12 +40,10 @@ export type Props = {
   setSignedIn: (signedIn: boolean) => void;
 };
 
-
-
 function App() {
   const [games, setGames] = useState<Game[]>([]);
   const [users, setUsers] = useState<User[]>([]);
-  const [user, setUser] = useState< User | null>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [signedIn, setSignedIn] = useState(false);
 
   const navigate = useNavigate();
@@ -55,12 +53,11 @@ function App() {
     setUser(user);
   }
 
-  function signOut(){
+  function signOut() {
     localStorage.removeItem("id");
     setUser(null);
   }
 
- 
   useEffect(() => {
     const userId = localStorage.id;
     if (userId) {
@@ -73,16 +70,15 @@ function App() {
     } else {
       navigate("/signIn");
     }
-  }, [localStorage.id])
+  }, [localStorage.id]);
 
   useEffect(() => {
     fetch("http://localhost:4000/users")
       .then((res) => res.json())
       .then((usersFromServer) => {
         setUsers(usersFromServer);
-      })
-  }, [])
-
+      });
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:4000/games")
@@ -94,15 +90,43 @@ function App() {
 
   return (
     <div className="App">
-      <Header signedIn={signedIn} user={user} signOut={signOut}/>
+      <Header signedIn={signedIn} user={user} signOut={signOut} />
       <Routes>
-        <Route index element={<Navigate to="/library"/>} />
-        <Route path="/library" element={<Library games={games} setGames={setGames}/>} />
-        <Route path="/store" element={<Store games={games} setGames={setGames}/>}/>
-        <Route path="/signin" element={<SignIn games={games} signIn={signIn} setGames={setGames} signedIn={signedIn} setSignedIn={setSignedIn}/>}/>
-        <Route path="/signup" element={<SignUp games={games} setGames={setGames} signIn={signIn} users={users} setUsers={setUsers}/>}/>
+        <Route index element={<Navigate to="/library" />} />
+        <Route
+          path="/library"
+          element={<Library games={games} setGames={setGames} />}
+        />
+        <Route
+          path="/store"
+          element={<Store games={games} setGames={setGames} />}
+        />
+        <Route
+          path="/signin"
+          element={
+            <SignIn
+              games={games}
+              signIn={signIn}
+              setGames={setGames}
+              signedIn={signedIn}
+              setSignedIn={setSignedIn}
+            />
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <SignUp
+              games={games}
+              setGames={setGames}
+              signIn={signIn}
+              users={users}
+              setUsers={setUsers}
+            />
+          }
+        />
       </Routes>
-      <Footer setGames={setGames}/>
+      <Footer setGames={setGames} />
     </div>
   );
 }

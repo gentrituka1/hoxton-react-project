@@ -8,15 +8,13 @@ import { Main } from "../components/Main";
 type Props = {
   games: Game[];
   setGames: (games: Game[]) => void;
-}
+};
 
 export function Library({ games, setGames }: Props) {
- 
-
   return (
     <>
-    <LeftSection games={games} setGames={setGames} />
-    <Main games={games} setGames={setGames}/>
+      <LeftSection games={games} setGames={setGames} />
+      <Main games={games} setGames={setGames} />
     </>
   );
 }

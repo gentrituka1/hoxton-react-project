@@ -4,7 +4,7 @@ import { Game } from "../App";
 
 type Props = {
   setGames: (games: Game[]) => void;
-}
+};
 
 export function Footer({ setGames }: Props) {
   return (
@@ -39,7 +39,7 @@ export function Footer({ setGames }: Props) {
               .then((gamesFromServer) => {
                 setGames(gamesFromServer);
               });
-              //@ts-ignore
+            //@ts-ignore
             location.reload();
           }}
         >
