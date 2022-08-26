@@ -186,6 +186,10 @@ header {
   cursor: pointer;
   padding: 10px;
 }
+.scroll-item img{
+  background-color: bisque;
+  padding: 20px;
+}
 .scroll-item h4 {
   font-size: 0.9rem;
   font-family: sans-serif;
