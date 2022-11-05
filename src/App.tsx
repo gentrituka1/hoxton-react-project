@@ -29,7 +29,6 @@ export type User = {
   avatar: string;
   email: string;
   password: string;
-  loggedIn: boolean;
 };
 
 export type Props = {
@@ -58,36 +57,7 @@ function App() {
     setUser(null);
   }
 
-  useEffect(() => {
-    const userId = localStorage.id;
-    if (userId) {
-      fetch(`http://localhost:4000/users/${userId}`)
-        .then((r) => r.json())
-        .then((userFromServer) => {
-          setUser(userFromServer);
-          navigate("/library");
-        });
-    } else {
-      navigate("/signIn");
-    }
-  }, [localStorage.id]);
-
-  useEffect(() => {
-    fetch("http://localhost:4000/users")
-      .then((res) => res.json())
-      .then((usersFromServer) => {
-        setUsers(usersFromServer);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch("http://localhost:4000/games")
-      .then((res) => res.json())
-      .then((gamesFromServer) => {
-        setGames(gamesFromServer);
-      });
-  }, []);
-
+  
   return (
     <div className="App">
       <Header signedIn={signedIn} user={user} signOut={signOut} />
